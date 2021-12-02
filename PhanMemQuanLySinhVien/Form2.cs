@@ -106,5 +106,9 @@ namespace PhanMemQuanLySinhVien
 
         }
 
+        private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
