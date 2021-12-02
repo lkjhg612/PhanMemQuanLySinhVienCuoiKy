@@ -26,14 +26,58 @@ namespace PhanMemQuanLySinhVien
 
         public void loadData()
         {
-            dataGridViewLop.DataSource = qlsv.LOPs.ToList();
+            dataGridViewLop.DataSource = qlsv.LOPs.Join(
+                qlsv.KHOAs,
+                x => x.MaKhoa,
+                y => y.MaKhoa,
+                (x, y) => new
+                {
+                    Malop = x.MaLop,
+                    TenLop = x.TenLop,
+                    TenKhoa = y.TenKhoa
+                }
+                ).ToList();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             loadData();
+            cbKhoa.DisplayMember = "TenKhoa";
+            cbKhoa.ValueMember = "MaKhoa";
+            cbKhoa.DataSource = qlsv.KHOAs.ToList();
         }
 
-       
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            String lop = txtTenLop.Text;
+            int khoa = Convert.ToInt32(cbKhoa.SelectedValue.ToString());
+            LOP lOP = new LOP
+            {
+                TenLop = lop,
+                MaKhoa = khoa
+            };
+            qlsv.LOPs.Add(lOP);
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            String tenLop = txtTenLop.Text;
+            int khoa = Convert.ToInt32(cbKhoa.SelectedValue.ToString());
+            int ID = Convert.ToInt32(txtMaLop.Text);
+            var SV = qlsv.LOPs.Where(x => x.MaLop == ID).First();
+            SV.TenLop = tenLop;
+            SV.MaKhoa = khoa;
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void dataGridViewLop_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaLop.Text = dataGridViewLop.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtTenLop.Text = dataGridViewLop.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cbKhoa.Text = dataGridViewLop.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
     }
 }
