@@ -80,15 +80,7 @@ namespace PhanMemQuanLySinhVien
             loadData();
         }
 
-        private void loadData()
-        {
-            dataGridViewKhoa.DataSource = qlsv.KHOAs.Select(c => new { c.MaKhoa, c.TenKhoa }).ToList();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            loadData();
-        }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
