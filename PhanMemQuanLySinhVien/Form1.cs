@@ -12,6 +12,7 @@ namespace PhanMemQuanLySinhVien
 {
     public partial class Form1 : Form
     {
+        int stt;
 
         QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
         public Form1()
@@ -26,12 +27,47 @@ namespace PhanMemQuanLySinhVien
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            KHOA kHOA = qlsv.KHOAs.Where(h => h.MaKhoa == stt).First();
+            kHOA.TenKhoa = txtTenKhoa.Text;
 
+            loadData();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            KHOA khoa = new KHOA();
+            khoa.TenKhoa = txtTenKhoa.Text;
+            qlsv.KHOAs.Add(khoa);
+            qlsv.SaveChanges();
+            loadData();
 
+            xoaKiTu();
+
+
+        }
+
+        public void loadData()
+        {
+            dataGridViewKhoa.DataSource = qlsv.KHOAs.ToList();
+
+        }
+
+        public void xoaKiTu()
+        {
+            txtMaKhoa.Text = string.Empty;
+            txtTenKhoa.Text = string.Empty;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void dataGridViewKhoa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            stt = Convert.ToInt32(dataGridViewKhoa.Rows[e.RowIndex].Cells["MaKhoa"].Value.ToString());
+            txtMaKhoa.Text = dataGridViewKhoa.Rows[e.RowIndex].Cells["MaKhoa"].Value.ToString();
+            txtTenKhoa.Text = dataGridViewKhoa.Rows[e.RowIndex].Cells["TenKhoa"].Value.ToString();
         }
     }
 }

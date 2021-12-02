@@ -64,6 +64,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.txtMaKhoa.Location = new System.Drawing.Point(201, 137);
             this.txtMaKhoa.Name = "txtMaKhoa";
+            this.txtMaKhoa.ReadOnly = true;
             this.txtMaKhoa.Size = new System.Drawing.Size(100, 22);
             this.txtMaKhoa.TabIndex = 2;
             this.txtMaKhoa.TextChanged += new System.EventHandler(this.txtMaKhoa_TextChanged);
@@ -84,6 +85,8 @@ namespace PhanMemQuanLySinhVien
             this.dataGridViewKhoa.RowTemplate.Height = 24;
             this.dataGridViewKhoa.Size = new System.Drawing.Size(389, 305);
             this.dataGridViewKhoa.TabIndex = 4;
+            
+            this.dataGridViewKhoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKhoa_CellDoubleClick);
             // 
             // txtTim
             // 
@@ -147,6 +150,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
