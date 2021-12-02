@@ -67,7 +67,7 @@ namespace PhanMemQuanLySinhVien
             // txtMaLop
             // 
             this.txtMaLop.Location = new System.Drawing.Point(129, 106);
-            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.ReadOnly = true;
             this.txtMaLop.Size = new System.Drawing.Size(76, 20);
@@ -76,7 +76,7 @@ namespace PhanMemQuanLySinhVien
             // txtTenLop
             // 
             this.txtTenLop.Location = new System.Drawing.Point(129, 150);
-            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(76, 20);
             this.txtTenLop.TabIndex = 4;
@@ -84,17 +84,18 @@ namespace PhanMemQuanLySinhVien
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(20, 251);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 41);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(98, 251);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 41);
             this.btnSua.TabIndex = 7;
@@ -105,7 +106,7 @@ namespace PhanMemQuanLySinhVien
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(182, 251);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 41);
             this.btnXoa.TabIndex = 8;
@@ -117,7 +118,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.dataGridViewLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLop.Location = new System.Drawing.Point(259, 80);
-            this.dataGridViewLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewLop.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewLop.Name = "dataGridViewLop";
             this.dataGridViewLop.RowHeadersWidth = 51;
             this.dataGridViewLop.RowTemplate.Height = 24;
@@ -128,7 +129,7 @@ namespace PhanMemQuanLySinhVien
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(496, 46);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(56, 19);
             this.btnTim.TabIndex = 10;
@@ -138,12 +139,10 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTim
             // 
-
             this.txtTim.Location = new System.Drawing.Point(392, 46);
-            this.txtTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(2);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(76, 20);
-
             this.txtTim.TabIndex = 11;
             this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
@@ -182,7 +181,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "FormLop";
             this.Load += new System.EventHandler(this.Form2_Load);
