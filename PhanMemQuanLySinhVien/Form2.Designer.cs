@@ -82,7 +82,6 @@ namespace PhanMemQuanLySinhVien
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -101,6 +100,7 @@ namespace PhanMemQuanLySinhVien
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dataGridViewLop
             // 
@@ -120,13 +120,15 @@ namespace PhanMemQuanLySinhVien
             this.btnTim.TabIndex = 10;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTim
             // 
-            this.txtTim.Location = new System.Drawing.Point(522, 57);
+            this.txtTim.Location = new System.Drawing.Point(463, 57);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(100, 22);
+            this.txtTim.Size = new System.Drawing.Size(159, 22);
             this.txtTim.TabIndex = 11;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // Form2
             // 

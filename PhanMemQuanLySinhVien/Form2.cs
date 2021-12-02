@@ -34,6 +34,29 @@ namespace PhanMemQuanLySinhVien
             loadData();
         }
 
-       
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtMaLop.Text);
+
+            var lop = qlsv.LOPs.Where(h => h.MaLop == id).First();
+            qlsv.LOPs.Remove(lop);
+            qlsv.SaveChanges();
+            loadData();
+
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtTim.Text);
+            dataGridViewLop.DataSource = qlsv.LOPs.Where(x => x.MaLop == id).Select(x => new { x.MaLop, x.TenLop }).ToList();
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTim.Text))
+            {
+                loadData();
+            }
+        }
     }
 }
