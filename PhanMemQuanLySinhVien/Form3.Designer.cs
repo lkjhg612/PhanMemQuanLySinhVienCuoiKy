@@ -51,6 +51,7 @@ namespace PhanMemQuanLySinhVien
             this.btnXoa.TabIndex = 19;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -81,6 +82,7 @@ namespace PhanMemQuanLySinhVien
             this.btnTim.TabIndex = 16;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimMonHoc
             // 
@@ -89,6 +91,7 @@ namespace PhanMemQuanLySinhVien
             this.txtTimMonHoc.Name = "txtTimMonHoc";
             this.txtTimMonHoc.Size = new System.Drawing.Size(105, 20);
             this.txtTimMonHoc.TabIndex = 15;
+            this.txtTimMonHoc.TextChanged += new System.EventHandler(this.txtTimMonHoc_TextChanged);
             // 
             // dataGridViewMonHoc
             // 
@@ -114,7 +117,6 @@ namespace PhanMemQuanLySinhVien
             this.txtMaMonHoc.Location = new System.Drawing.Point(138, 124);
             this.txtMaMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.ReadOnly = true;
             this.txtMaMonHoc.Size = new System.Drawing.Size(100, 20);
             this.txtMaMonHoc.TabIndex = 12;
             // 
