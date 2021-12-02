@@ -45,70 +45,82 @@ namespace PhanMemQuanLySinhVien
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 137);
+            this.label1.Location = new System.Drawing.Point(68, 111);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã khoa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 207);
+            this.label2.Location = new System.Drawing.Point(68, 168);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Khoa";
             // 
             // txtMaKhoa
             // 
-            this.txtMaKhoa.Location = new System.Drawing.Point(201, 137);
+            this.txtMaKhoa.Location = new System.Drawing.Point(151, 111);
+            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKhoa.Name = "txtMaKhoa";
+
             this.txtMaKhoa.ReadOnly = true;
             this.txtMaKhoa.Size = new System.Drawing.Size(100, 22);
+
             this.txtMaKhoa.TabIndex = 2;
             this.txtMaKhoa.TextChanged += new System.EventHandler(this.txtMaKhoa_TextChanged);
             // 
             // txtTenKhoa
             // 
-            this.txtTenKhoa.Location = new System.Drawing.Point(201, 207);
+            this.txtTenKhoa.Location = new System.Drawing.Point(151, 168);
+            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(100, 22);
+            this.txtTenKhoa.Size = new System.Drawing.Size(76, 20);
             this.txtTenKhoa.TabIndex = 3;
             // 
             // dataGridViewKhoa
             // 
             this.dataGridViewKhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKhoa.Location = new System.Drawing.Point(378, 56);
+            this.dataGridViewKhoa.Location = new System.Drawing.Point(284, 46);
+            this.dataGridViewKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewKhoa.Name = "dataGridViewKhoa";
             this.dataGridViewKhoa.RowHeadersWidth = 51;
             this.dataGridViewKhoa.RowTemplate.Height = 24;
-            this.dataGridViewKhoa.Size = new System.Drawing.Size(389, 305);
+            this.dataGridViewKhoa.Size = new System.Drawing.Size(292, 248);
             this.dataGridViewKhoa.TabIndex = 4;
             
             this.dataGridViewKhoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKhoa_CellDoubleClick);
             // 
             // txtTim
             // 
-            this.txtTim.Location = new System.Drawing.Point(533, 13);
+            this.txtTim.Location = new System.Drawing.Point(371, 11);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(2);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(100, 22);
+            this.txtTim.Size = new System.Drawing.Size(105, 20);
             this.txtTim.TabIndex = 5;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(661, 13);
+            this.btnTim.Location = new System.Drawing.Point(496, 11);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(56, 19);
             this.btnTim.TabIndex = 6;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(38, 304);
+            this.btnThem.Location = new System.Drawing.Point(28, 247);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 57);
+            this.btnThem.Size = new System.Drawing.Size(56, 46);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -116,9 +128,10 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(136, 304);
+            this.btnSua.Location = new System.Drawing.Point(102, 247);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(80, 57);
+            this.btnSua.Size = new System.Drawing.Size(60, 46);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -126,18 +139,20 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(243, 304);
+            this.btnXoa.Location = new System.Drawing.Point(182, 247);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(85, 57);
+            this.btnXoa.Size = new System.Drawing.Size(64, 46);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
@@ -148,6 +163,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.txtMaKhoa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

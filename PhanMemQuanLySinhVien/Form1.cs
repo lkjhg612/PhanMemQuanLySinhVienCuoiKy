@@ -69,5 +69,39 @@ namespace PhanMemQuanLySinhVien
             txtMaKhoa.Text = dataGridViewKhoa.Rows[e.RowIndex].Cells["MaKhoa"].Value.ToString();
             txtTenKhoa.Text = dataGridViewKhoa.Rows[e.RowIndex].Cells["TenKhoa"].Value.ToString();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtMaKhoa.Text);
+
+            var sv = qlsv.KHOAs.Where(x => x.MaKhoa == id).First();
+            qlsv.KHOAs.Remove(sv);
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void loadData()
+        {
+            dataGridViewKhoa.DataSource = qlsv.KHOAs.Select(c => new { c.MaKhoa, c.TenKhoa }).ToList();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtTim.Text);
+            dataGridViewKhoa.DataSource = qlsv.KHOAs.Where(x => x.MaKhoa == id).Select(x => new { x.MaKhoa, x.TenKhoa }).ToList();
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTim.Text))
+            {
+                loadData();
+            }
+        }
     }
 }
