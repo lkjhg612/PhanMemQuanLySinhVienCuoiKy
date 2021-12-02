@@ -45,6 +45,8 @@ namespace PhanMemQuanLySinhVien
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@ namespace PhanMemQuanLySinhVien
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 133);
+            this.label2.Location = new System.Drawing.Point(33, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 1;
@@ -77,7 +79,7 @@ namespace PhanMemQuanLySinhVien
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 193);
+            this.label3.Location = new System.Drawing.Point(33, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 3;
@@ -86,7 +88,7 @@ namespace PhanMemQuanLySinhVien
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 258);
+            this.label4.Location = new System.Drawing.Point(32, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 4;
@@ -106,19 +108,20 @@ namespace PhanMemQuanLySinhVien
             // 
             this.txtMaSinhVien.Location = new System.Drawing.Point(169, 69);
             this.txtMaSinhVien.Name = "txtMaSinhVien";
+            this.txtMaSinhVien.ReadOnly = true;
             this.txtMaSinhVien.Size = new System.Drawing.Size(144, 22);
             this.txtMaSinhVien.TabIndex = 6;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(169, 130);
+            this.txtHoTen.Location = new System.Drawing.Point(169, 111);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(144, 22);
             this.txtHoTen.TabIndex = 7;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(169, 258);
+            this.txtDiaChi.Location = new System.Drawing.Point(169, 265);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(144, 22);
             this.txtDiaChi.TabIndex = 9;
@@ -132,6 +135,7 @@ namespace PhanMemQuanLySinhVien
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(558, 369);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnTim
             // 
@@ -152,10 +156,11 @@ namespace PhanMemQuanLySinhVien
             // dateTimeNTNS
             // 
             this.dateTimeNTNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeNTNS.Location = new System.Drawing.Point(169, 188);
+            this.dateTimeNTNS.Location = new System.Drawing.Point(169, 212);
             this.dateTimeNTNS.Name = "dateTimeNTNS";
             this.dateTimeNTNS.Size = new System.Drawing.Size(144, 22);
             this.dateTimeNTNS.TabIndex = 13;
+            this.dateTimeNTNS.ValueChanged += new System.EventHandler(this.dateTimeNTNS_ValueChanged);
             // 
             // btnThem
             // 
@@ -175,6 +180,7 @@ namespace PhanMemQuanLySinhVien
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -185,11 +191,33 @@ namespace PhanMemQuanLySinhVien
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(33, 158);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 17);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Giới tính";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(169, 151);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(144, 24);
+            this.cbGioiTinh.TabIndex = 18;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 450);
+            this.Controls.Add(this.cbGioiTinh);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
@@ -233,5 +261,7 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
     }
 }
