@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.DIEM" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.LOP" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="6.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="7.25" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.QUYEN" Width="1.5" PointX="4.375" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.SINHVIEN" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
