@@ -46,14 +46,15 @@ namespace PhanMemQuanLySinhVien
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.rbtnNam = new System.Windows.Forms.RadioButton();
+            this.rbtnNu = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 56);
+            this.label1.Location = new System.Drawing.Point(24, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
@@ -63,7 +64,7 @@ namespace PhanMemQuanLySinhVien
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 94);
+            this.label2.Location = new System.Drawing.Point(25, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
@@ -74,7 +75,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.cbLop.FormattingEnabled = true;
             this.cbLop.Location = new System.Drawing.Point(127, 258);
-            this.cbLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLop.Margin = new System.Windows.Forms.Padding(2);
             this.cbLop.Name = "cbLop";
             this.cbLop.Size = new System.Drawing.Size(109, 21);
             this.cbLop.TabIndex = 2;
@@ -113,7 +114,7 @@ namespace PhanMemQuanLySinhVien
             // txtMaSinhVien
             // 
             this.txtMaSinhVien.Location = new System.Drawing.Point(127, 56);
-            this.txtMaSinhVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaSinhVien.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSinhVien.Name = "txtMaSinhVien";
             this.txtMaSinhVien.ReadOnly = true;
             this.txtMaSinhVien.Size = new System.Drawing.Size(109, 20);
@@ -122,7 +123,7 @@ namespace PhanMemQuanLySinhVien
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(127, 90);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(109, 20);
             this.txtHoTen.TabIndex = 7;
@@ -130,7 +131,7 @@ namespace PhanMemQuanLySinhVien
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(127, 215);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(109, 20);
             this.txtDiaChi.TabIndex = 9;
@@ -139,7 +140,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(255, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -150,7 +151,7 @@ namespace PhanMemQuanLySinhVien
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(482, 32);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(56, 19);
             this.btnTim.TabIndex = 11;
@@ -161,7 +162,7 @@ namespace PhanMemQuanLySinhVien
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(346, 32);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(109, 20);
             this.txtTimKiem.TabIndex = 12;
@@ -171,7 +172,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.dateTimeNTNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeNTNS.Location = new System.Drawing.Point(127, 172);
-            this.dateTimeNTNS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeNTNS.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeNTNS.Name = "dateTimeNTNS";
             this.dateTimeNTNS.Size = new System.Drawing.Size(109, 20);
             this.dateTimeNTNS.TabIndex = 13;
@@ -180,7 +181,7 @@ namespace PhanMemQuanLySinhVien
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(20, 289);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 45);
             this.btnThem.TabIndex = 14;
@@ -191,7 +192,7 @@ namespace PhanMemQuanLySinhVien
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(94, 289);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 45);
             this.btnSua.TabIndex = 15;
@@ -202,7 +203,7 @@ namespace PhanMemQuanLySinhVien
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(166, 289);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 45);
             this.btnXoa.TabIndex = 16;
@@ -213,31 +214,42 @@ namespace PhanMemQuanLySinhVien
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 128);
+            this.label6.Location = new System.Drawing.Point(25, 132);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 17;
             this.label6.Text = "Giới tính";
             // 
-            // cbGioiTinh
+            // rbtnNam
             // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(127, 123);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(109, 21);
-            this.cbGioiTinh.TabIndex = 18;
+            this.rbtnNam.AutoSize = true;
+            this.rbtnNam.Location = new System.Drawing.Point(127, 128);
+            this.rbtnNam.Name = "rbtnNam";
+            this.rbtnNam.Size = new System.Drawing.Size(47, 17);
+            this.rbtnNam.TabIndex = 18;
+            this.rbtnNam.TabStop = true;
+            this.rbtnNam.Text = "Nam";
+            this.rbtnNam.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNu
+            // 
+            this.rbtnNu.AutoSize = true;
+            this.rbtnNu.Location = new System.Drawing.Point(183, 128);
+            this.rbtnNu.Name = "rbtnNu";
+            this.rbtnNu.Size = new System.Drawing.Size(39, 17);
+            this.rbtnNu.TabIndex = 18;
+            this.rbtnNu.TabStop = true;
+            this.rbtnNu.Text = "Nữ";
+            this.rbtnNu.UseVisualStyleBackColor = true;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 366);
-            this.Controls.Add(this.cbGioiTinh);
+            this.Controls.Add(this.rbtnNu);
+            this.Controls.Add(this.rbtnNam);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -255,7 +267,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.cbLop);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -284,6 +296,7 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.RadioButton rbtnNam;
+        private System.Windows.Forms.RadioButton rbtnNu;
     }
 }

@@ -43,7 +43,14 @@ namespace PhanMemQuanLySinhVien
         {
             SINHVIEN sv = new SINHVIEN();
             sv.HoTen = txtHoTen.Text;
-            sv.GioiTinh = cbGioiTinh.Text;
+            if (rbtnNam.Checked)
+            {
+                sv.GioiTinh = "Nam";
+            } 
+            if (rbtnNu.Checked)
+            {
+                sv.GioiTinh = "Nữ";
+            }
             sv.NTNS = Convert.ToDateTime(dateTimeNTNS.Text);//convert sang ngày tháng
             sv.DiaChi = txtDiaChi.Text;
             sv.MaLop = Convert.ToInt32(cbLop.SelectedValue.ToString());
@@ -73,7 +80,14 @@ namespace PhanMemQuanLySinhVien
         {
             SINHVIEN sv = qlsv.SINHVIENs.Where(h => h.MaSV == stt).First();
             sv.HoTen = txtHoTen.Text;
-            sv.GioiTinh = cbGioiTinh.Text;
+            if (rbtnNam.Checked)
+            {
+                sv.GioiTinh = "Nam";
+            }
+            if (rbtnNu.Checked)
+            {
+                sv.GioiTinh = "Nữ";
+            }
             sv.NTNS = Convert.ToDateTime(dateTimeNTNS.Text);
             sv.DiaChi = txtDiaChi.Text;
             sv.MaLop = Convert.ToInt32(cbLop.SelectedValue.ToString());
@@ -88,7 +102,15 @@ namespace PhanMemQuanLySinhVien
             stt = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["MaSV"].Value.ToString());
             txtMaSinhVien.Text = dataGridView1.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
             txtHoTen.Text = dataGridView1.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
-            cbGioiTinh.Text = dataGridView1.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+            String gt  = dataGridView1.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+            if (gt.Equals("Nam"))
+            {
+                rbtnNam.Checked = true;
+            }
+            else
+            {
+                rbtnNu.Checked = true;
+            }
             dateTimeNTNS.Text = dataGridView1.Rows[e.RowIndex].Cells["NTNS"].Value.ToString();
             txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
             cbLop.Text = dataGridView1.Rows[e.RowIndex].Cells["TenLop"].Value.ToString();
