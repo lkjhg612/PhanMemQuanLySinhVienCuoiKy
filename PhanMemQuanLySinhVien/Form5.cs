@@ -16,18 +16,12 @@ namespace PhanMemQuanLySinhVien
         public Form5()
         {
             InitializeComponent();
+            
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            var dssv = qlsv.SINHVIENs.Select(x => new
-            {
-                x.MaSV,
-                x.HoTen,
-                x.LOP.TenLop,
-                x.LOP.KHOA.TenKhoa
-            }).ToList();
-            dataGridViewTTSV.DataSource = dssv;
+            loadData();
 
             cbLop.DisplayMember = "TenLop";//hiển thị cột TenLop lên Combo box
             cbLop.ValueMember = "MaLop"; // Khi hiển thị rồi mà người dùng chọn thì nó lấy cột MaLop
@@ -36,6 +30,25 @@ namespace PhanMemQuanLySinhVien
             cbKhoa.DisplayMember = "TenKhoa";
             cbKhoa.ValueMember = "MaKhoa";
             cbKhoa.DataSource = qlsv.KHOAs.ToList();
+
+            cbMonHoc.DisplayMember = "TenMH";
+            cbMonHoc.ValueMember = "MaMH";
+            cbMonHoc.DataSource = qlsv.MONHOCs.ToList();
+
+        }
+
+        private void loadData()
+        {
+            var dssv = qlsv.SINHVIENs.Select(x => new
+            {
+                x.MaSV,
+                x.HoTen,
+                x.LOP.TenLop,
+                x.LOP.KHOA.TenKhoa
+            }).ToList();
+
+            dataGridViewTTSV.DataSource = dssv;
+
 
 
 
@@ -88,6 +101,121 @@ namespace PhanMemQuanLySinhVien
             }).ToList();
 
             dataGridViewTTSV.DataSource = dssv;
+        }
+
+        
+
+        private void dataGridViewTTSV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            txtMaSinhVien.Text = dataGridViewTTSV.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtTen.Text = dataGridViewTTSV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            loadDataDiemSV();
+
+        }
+
+        private void dataGridViewDiemSV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           cbMonHoc.Text = dataGridViewDiemSV.Rows[e.RowIndex].Cells[0].Value.ToString();
+           txtDiemQT.Text = dataGridViewDiemSV.Rows[e.RowIndex].Cells["DiemQuaTrinh"].Value.ToString();
+           txtDiemGK.Text = dataGridViewDiemSV.Rows[e.RowIndex].Cells["DiemGiuaKy"].Value.ToString();
+           txtDiemCK.Text = dataGridViewDiemSV.Rows[e.RowIndex].Cells["DiemCuoiKy"].Value.ToString();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            int masv = Convert.ToInt32(txtMaSinhVien.Text);
+            int mamh = Convert.ToInt32(cbMonHoc.SelectedValue.ToString());
+
+            int DQT = Convert.ToInt32(txtDiemQT.Text);
+            int DGK = Convert.ToInt32(txtDiemGK.Text);
+            int DCK = Convert.ToInt32(txtDiemCK.Text);
+
+            DIEM diem = new DIEM()
+            {
+                MaSV = masv,
+                MaMH = mamh,
+                DiemQuaTrinh = DQT,
+                DiemGiuaKy = DGK,
+                DiemCuoiKy = DCK,
+            };
+
+            qlsv.DIEMs.Add(diem);
+            qlsv.SaveChanges();
+
+            loadDataDiemSV();
+        }
+
+        private void loadDataDiemSV()
+        {
+            int maSV = Convert.ToInt32(txtMaSinhVien.Text);
+            var dsdiem = qlsv.DIEMs.Where(x => x.MaSV == maSV).Select(x => new
+            {
+                x.MONHOC.TenMH,
+
+                x.SINHVIEN.MaSV,
+                x.SINHVIEN.HoTen,
+
+                x.DiemQuaTrinh,
+                x.DiemGiuaKy,
+                x.DiemCuoiKy
+            }).ToList();
+
+            dataGridViewDiemSV.DataSource = dsdiem;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            int maSV = Convert.ToInt32(txtMaSinhVien.Text);
+            int maMH = Convert.ToInt32(cbMonHoc.SelectedValue.ToString());
+
+            DIEM dsv = qlsv.DIEMs.Where(h => h.SINHVIEN.MaSV == maSV && h.MONHOC.MaMH == maMH).First();
+            dsv.DiemQuaTrinh = Convert.ToInt32(txtDiemQT.Text);
+            dsv.DiemGiuaKy = Convert.ToInt32(txtDiemGK.Text);
+            dsv.DiemCuoiKy = Convert.ToInt32(txtDiemCK.Text);
+
+            qlsv.SaveChanges();
+            loadDataDiemSV();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int maSV = Convert.ToInt32(txtMaSinhVien.Text);
+            int maMH = Convert.ToInt32(cbMonHoc.SelectedValue.ToString());
+            var diem = qlsv.DIEMs.Where(h => h.SINHVIEN.MaSV == maSV && h.MONHOC.MaMH == maMH).First();
+
+            qlsv.DIEMs.Remove(diem);
+
+            qlsv.SaveChanges();
+
+            loadDataDiemSV();
+           
+            
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int maSV = Convert.ToInt32(txtTim.Text);
+
+            dataGridViewTTSV.DataSource = qlsv.SINHVIENs.Where(h => h.MaSV == maSV).Select(h => new 
+            { 
+                h.MaSV,
+                h.HoTen,
+                h.LOP.TenLop,
+                h.LOP.KHOA.TenKhoa
+
+            }).ToList();
+
+
+
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTim.Text))
+            {
+                loadData();
+            }
         }
     }
 }
