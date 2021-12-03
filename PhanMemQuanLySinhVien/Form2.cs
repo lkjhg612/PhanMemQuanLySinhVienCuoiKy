@@ -26,17 +26,12 @@ namespace PhanMemQuanLySinhVien
 
         public void loadData()
         {
-            dataGridViewLop.DataSource = qlsv.LOPs.Join(
-                qlsv.KHOAs,
-                x => x.MaKhoa,
-                y => y.MaKhoa,
-                (x, y) => new
-                {
-                    Malop = x.MaLop,
-                    TenLop = x.TenLop,
-                    TenKhoa = y.TenKhoa
-                }
-                ).ToList();
+            dataGridViewLop.DataSource = qlsv.LOPs.Select(s => new 
+            {
+                s.MaLop,
+                s.TenLop,
+                s.KHOA.TenKhoa
+            }).ToList();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -94,7 +89,7 @@ namespace PhanMemQuanLySinhVien
         private void btnTim_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtTim.Text);
-            dataGridViewLop.DataSource = qlsv.LOPs.Where(x => x.MaLop == id).Select(x => new { x.MaLop, x.TenLop }).ToList();
+            dataGridViewLop.DataSource = qlsv.LOPs.Where(x => x.MaLop == id).Select(x => new { x.MaLop, x.TenLop, x.KHOA.TenKhoa }).ToList();
         }
 
         private void txtTim_TextChanged(object sender, EventArgs e)

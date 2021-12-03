@@ -21,21 +21,16 @@ namespace PhanMemQuanLySinhVien
 
         public void loadData()
         {
-            dataGridView1.DataSource = qlsv.SINHVIENs.Join(
-                qlsv.LOPs,//bảng cần nối
-                s => s.MaLop, //khóa ngoại của bảng SV
-                q => q.MaLop, //khóa chính của bảng LOP
-                (s, q) => new
-                {
-                    MaSV = s.MaSV,
-                    Hoten = s.HoTen,
-                    Gioitinh = s.GioiTinh,
-                    NTNS = s.NTNS,
-                    DiaChi = s.DiaChi,
-
-                    TenLop = q.TenLop
-                }
-                ).ToList();
+            dataGridView1.DataSource = qlsv.SINHVIENs.Select(s => new 
+            {   s.MaSV, 
+                s.HoTen, 
+                s.GioiTinh, 
+                s.NTNS, 
+                s.DiaChi, 
+                s.LOP.TenLop, 
+                s.LOP.KHOA.TenKhoa
+            }
+            ).ToList();
       
         }
 
