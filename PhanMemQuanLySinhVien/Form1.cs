@@ -48,7 +48,7 @@ namespace PhanMemQuanLySinhVien
 
         public void loadData()
         {
-            dataGridViewKhoa.DataSource = qlsv.KHOAs.ToList();
+            dataGridViewKhoa.DataSource = qlsv.KHOAs.Select(s => new { s.MaKhoa, s.TenKhoa }).ToList();
 
         }
 

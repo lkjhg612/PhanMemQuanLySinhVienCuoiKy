@@ -21,7 +21,11 @@ namespace PhanMemQuanLySinhVien
 
         private void loadData()
         {
-            dataGridViewMonHoc.DataSource = qlsv.MONHOCs.ToList();
+            dataGridViewMonHoc.DataSource = qlsv.MONHOCs.Select(s => new 
+            {
+            s.MaMH,
+            s.TenMH
+            }).ToList();
         }
         private void Form3_Load(object sender, EventArgs e)
         {

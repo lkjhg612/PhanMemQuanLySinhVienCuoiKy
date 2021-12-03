@@ -21,21 +21,16 @@ namespace PhanMemQuanLySinhVien
 
         public void loadData()
         {
-            dataGridView1.DataSource = qlsv.SINHVIENs.Join(
-                qlsv.LOPs,//bảng cần nối
-                s => s.MaLop, //khóa ngoại của bảng SV
-                q => q.MaLop, //khóa chính của bảng LOP
-                (s, q) => new
-                {
-                    MaSV = s.MaSV,
-                    Hoten = s.HoTen,
-                    Gioitinh = s.GioiTinh,
-                    NTNS = s.NTNS,
-                    DiaChi = s.DiaChi,
-
-                    TenLop = q.TenLop
-                }
-                ).ToList();
+            dataGridView1.DataSource = qlsv.SINHVIENs.Select(s => new 
+            {   s.MaSV, 
+                s.HoTen, 
+                s.GioiTinh, 
+                s.NTNS, 
+                s.DiaChi, 
+                s.LOP.TenLop, 
+                s.LOP.KHOA.TenKhoa
+            }
+            ).ToList();
       
         }
 
@@ -48,7 +43,14 @@ namespace PhanMemQuanLySinhVien
         {
             SINHVIEN sv = new SINHVIEN();
             sv.HoTen = txtHoTen.Text;
-            sv.GioiTinh = cbGioiTinh.Text;
+            if (rbtnNam.Checked)
+            {
+                sv.GioiTinh = "Nam";
+            } 
+            if (rbtnNu.Checked)
+            {
+                sv.GioiTinh = "Nữ";
+            }
             sv.NTNS = Convert.ToDateTime(dateTimeNTNS.Text);//convert sang ngày tháng
             sv.DiaChi = txtDiaChi.Text;
             sv.MaLop = Convert.ToInt32(cbLop.SelectedValue.ToString());
@@ -78,7 +80,14 @@ namespace PhanMemQuanLySinhVien
         {
             SINHVIEN sv = qlsv.SINHVIENs.Where(h => h.MaSV == stt).First();
             sv.HoTen = txtHoTen.Text;
-            sv.GioiTinh = cbGioiTinh.Text;
+            if (rbtnNam.Checked)
+            {
+                sv.GioiTinh = "Nam";
+            }
+            if (rbtnNu.Checked)
+            {
+                sv.GioiTinh = "Nữ";
+            }
             sv.NTNS = Convert.ToDateTime(dateTimeNTNS.Text);
             sv.DiaChi = txtDiaChi.Text;
             sv.MaLop = Convert.ToInt32(cbLop.SelectedValue.ToString());
@@ -93,10 +102,52 @@ namespace PhanMemQuanLySinhVien
             stt = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["MaSV"].Value.ToString());
             txtMaSinhVien.Text = dataGridView1.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
             txtHoTen.Text = dataGridView1.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
-            cbGioiTinh.Text = dataGridView1.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+            String gt  = dataGridView1.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+            if (gt.Equals("Nam"))
+            {
+                rbtnNam.Checked = true;
+            }
+            else
+            {
+                rbtnNu.Checked = true;
+            }
             dateTimeNTNS.Text = dataGridView1.Rows[e.RowIndex].Cells["NTNS"].Value.ToString();
             txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
             cbLop.Text = dataGridView1.Rows[e.RowIndex].Cells["TenLop"].Value.ToString();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtMaSinhVien.Text);
+            var st = qlsv.SINHVIENs.Find(id);
+            qlsv.SINHVIENs.Remove(st);
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtTimKiem.Text);
+            var list = qlsv.SINHVIENs.Where(s => s.MaSV == id).Select(s => new
+            {
+                s.MaSV,
+                s.HoTen,
+                s.GioiTinh,
+                s.NTNS,
+                s.DiaChi,
+                s.LOP.TenLop,
+                s.LOP.KHOA.TenKhoa
+            }).ToList();
+
+            dataGridView1.DataSource = list;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                loadData();
+            }
         }
     }
 }
