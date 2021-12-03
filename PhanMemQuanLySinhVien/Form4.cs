@@ -93,5 +93,39 @@ namespace PhanMemQuanLySinhVien
             txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
             cbLop.Text = dataGridView1.Rows[e.RowIndex].Cells["TenLop"].Value.ToString();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtMaSinhVien.Text);
+            var st = qlsv.SINHVIENs.Find(id);
+            qlsv.SINHVIENs.Remove(st);
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtTimKiem.Text);
+            var list = qlsv.SINHVIENs.Where(s => s.MaSV == id).Select(s => new
+            {
+                s.MaSV,
+                s.HoTen,
+                s.GioiTinh,
+                s.NTNS,
+                s.DiaChi,
+                s.LOP.TenLop,
+                s.LOP.KHOA.TenKhoa
+            }).ToList();
+
+            dataGridView1.DataSource = list;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                loadData();
+            }
+        }
     }
 }
