@@ -47,6 +47,7 @@ namespace PhanMemQuanLySinhVien
         {
             MONHOC mh = qlsv.MONHOCs.Where(h => h.MaMH == stt).First();
             mh.TenMH = txtTenMonHoc.Text;
+            qlsv.SaveChanges();
             loadData();
         }
 
