@@ -12,6 +12,9 @@ namespace PhanMemQuanLySinhVien
 {
     public partial class Form6 : Form
     {
+
+        QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
+
         public Form6()
         {
             InitializeComponent();
@@ -21,5 +24,38 @@ namespace PhanMemQuanLySinhVien
         {
 
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            String taiKhoan = txtTenDangNhap.Text;
+            String matKhau = txtMatKhau.Text;
+
+            List<NGUOIDUNG> users = qlsv.NGUOIDUNGs.Where(h => h.TaiKhoan == taiKhoan && h.MatKhau == matKhau).ToList();
+
+            if (users.Count == 0)
+            {
+                MessageBox.Show("SAI TÊN TK HOẶC MK");
+            } else
+            {
+                NGUOIDUNG ND = users.First(); //Lấy phần tử đầu tiên của list users và gán vào biến nd có kiểu NGUOIDUNG
+                String tenNgdung = ND.TenNguoiDung;
+                FormTH formTH = new FormTH(tenNgdung);
+                formTH.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void cbHien_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHien.Checked)
+            {
+                txtMatKhau.UseSystemPasswordChar = false;
+            } else
+            {
+                txtMatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
     }
 }
