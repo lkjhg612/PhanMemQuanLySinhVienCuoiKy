@@ -109,10 +109,10 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtMaSinhVien
             // 
+            this.txtMaSinhVien.Enabled = false;
             this.txtMaSinhVien.Location = new System.Drawing.Point(181, 146);
             this.txtMaSinhVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaSinhVien.Name = "txtMaSinhVien";
-            this.txtMaSinhVien.ReadOnly = true;
             this.txtMaSinhVien.Size = new System.Drawing.Size(144, 22);
             this.txtMaSinhVien.TabIndex = 6;
             // 
@@ -220,7 +220,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.rbtnNam.AutoSize = true;
             this.rbtnNam.Location = new System.Drawing.Point(181, 235);
-            this.rbtnNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnNam.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnNam.Name = "rbtnNam";
             this.rbtnNam.Size = new System.Drawing.Size(58, 21);
             this.rbtnNam.TabIndex = 18;
@@ -232,7 +232,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.rbtnNu.AutoSize = true;
             this.rbtnNu.Location = new System.Drawing.Point(256, 235);
-            this.rbtnNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnNu.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnNu.Name = "rbtnNu";
             this.rbtnNu.Size = new System.Drawing.Size(47, 21);
             this.rbtnNu.TabIndex = 18;
@@ -254,7 +254,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 553);
+            this.ClientSize = new System.Drawing.Size(949, 553);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rbtnNu);
             this.Controls.Add(this.rbtnNam);
@@ -289,23 +289,23 @@ namespace PhanMemQuanLySinhVien
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMaSinhVien;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.DateTimePicker dateTimeNTNS;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton rbtnNam;
-        private System.Windows.Forms.RadioButton rbtnNu;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox cbLop;
+        public System.Windows.Forms.TextBox txtHoTen;
+        public System.Windows.Forms.TextBox txtDiaChi;
+        public System.Windows.Forms.DateTimePicker dateTimeNTNS;
+        public System.Windows.Forms.Button btnThem;
+        public System.Windows.Forms.Button btnSua;
+        public System.Windows.Forms.Button btnXoa;
+        public System.Windows.Forms.RadioButton rbtnNam;
+        public System.Windows.Forms.RadioButton rbtnNu;
     }
 }
