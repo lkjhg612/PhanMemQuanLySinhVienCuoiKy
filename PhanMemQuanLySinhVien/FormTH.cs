@@ -19,7 +19,7 @@ namespace PhanMemQuanLySinhVien
         Form3 form3;
         Form4 form4;
         Form5 form5;
-
+        Form6 form6;
         public FormTH(String UN)
         {
             InitializeComponent();
@@ -56,7 +56,20 @@ namespace PhanMemQuanLySinhVien
         }
         private void btnQuanLyLop_Clicked()
         {
-            MessageBox.Show("S");
+            if (form2 == null)
+            {
+                form2 = new Form2();
+                form2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.MdiParent = this;
+                form2.Show();
+            }
+            else
+            {
+                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
+                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form2.Activate();
+            }
         }
         private void btnQLMH_Clicked()
         {
@@ -85,7 +98,9 @@ namespace PhanMemQuanLySinhVien
         }
         private void btnDangXuat_Clicked()
         {
-            MessageBox.Show("S");
+            this.Close();
+            form6 = new Form6();
+            form6.Show();
         }
 
         private void FormTH_Load(object sender, EventArgs e)

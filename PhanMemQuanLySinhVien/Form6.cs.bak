@@ -12,9 +12,10 @@ namespace PhanMemQuanLySinhVien
 {
     public partial class Form6 : Form
     {
-
+<<<<<<< HEAD
+=======
         QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
-
+>>>>>>> Khang
         public Form6()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace PhanMemQuanLySinhVien
         {
 
         }
+<<<<<<< HEAD
+=======
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
@@ -56,6 +59,6 @@ namespace PhanMemQuanLySinhVien
                 txtMatKhau.UseSystemPasswordChar = true;
             }
         }
-
+>>>>>>> Khang
     }
 }
