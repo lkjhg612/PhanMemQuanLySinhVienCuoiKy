@@ -37,37 +37,40 @@ namespace PhanMemQuanLySinhVien
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dataGridViewLop = new System.Windows.Forms.DataGridView();
-            this.btnTim = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLop)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 150);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(43, 194);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên lớp";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 106);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(43, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã lớp";
             // 
             // txtMaLop
             // 
-            this.txtMaLop.Location = new System.Drawing.Point(129, 106);
-            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaLop.Location = new System.Drawing.Point(144, 150);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.ReadOnly = true;
             this.txtMaLop.Size = new System.Drawing.Size(76, 20);
@@ -75,16 +78,16 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(129, 150);
-            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenLop.Location = new System.Drawing.Point(144, 194);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(76, 20);
             this.txtTenLop.TabIndex = 4;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(20, 251);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(35, 295);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 41);
             this.btnThem.TabIndex = 6;
@@ -94,8 +97,8 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(98, 251);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(113, 295);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 41);
             this.btnSua.TabIndex = 7;
@@ -105,8 +108,8 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(182, 251);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(197, 295);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 41);
             this.btnXoa.TabIndex = 8;
@@ -117,8 +120,8 @@ namespace PhanMemQuanLySinhVien
             // dataGridViewLop
             // 
             this.dataGridViewLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLop.Location = new System.Drawing.Point(268, 80);
-            this.dataGridViewLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewLop.Location = new System.Drawing.Point(322, 134);
+            this.dataGridViewLop.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewLop.Name = "dataGridViewLop";
             this.dataGridViewLop.RowHeadersWidth = 51;
             this.dataGridViewLop.RowTemplate.Height = 24;
@@ -126,21 +129,10 @@ namespace PhanMemQuanLySinhVien
             this.dataGridViewLop.TabIndex = 9;
             this.dataGridViewLop.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLop_CellDoubleClick);
             // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(360, 46);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(56, 19);
-            this.btnTim.TabIndex = 10;
-            this.btnTim.Text = "Tìm kiếm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
             // txtTim
             // 
-            this.txtTim.Location = new System.Drawing.Point(433, 45);
-            this.txtTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTim.Location = new System.Drawing.Point(431, 71);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(2);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(159, 20);
             this.txtTim.TabIndex = 11;
@@ -149,7 +141,7 @@ namespace PhanMemQuanLySinhVien
             // cbKhoa
             // 
             this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(129, 194);
+            this.cbKhoa.Location = new System.Drawing.Point(144, 238);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(121, 21);
             this.cbKhoa.TabIndex = 12;
@@ -158,12 +150,35 @@ namespace PhanMemQuanLySinhVien
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 194);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(43, 237);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(43, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Khoa";
+            // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(621, 66);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(56, 28);
+            this.btnTim.TabIndex = 10;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(190, 37);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Quản lý lớp";
             // 
             // Form2
             // 
@@ -171,6 +186,7 @@ namespace PhanMemQuanLySinhVien
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(714, 449);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cbKhoa);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.btnTim);
@@ -183,7 +199,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "FormLop";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -202,9 +218,10 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dataGridViewLop;
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.ComboBox cbKhoa;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Label label4;
     }
 }

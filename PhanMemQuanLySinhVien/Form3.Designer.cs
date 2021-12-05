@@ -46,7 +46,7 @@ namespace PhanMemQuanLySinhVien
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(210, 333);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(70, 46);
             this.btnXoa.TabIndex = 19;
@@ -57,7 +57,7 @@ namespace PhanMemQuanLySinhVien
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(114, 333);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(60, 46);
             this.btnSua.TabIndex = 18;
@@ -68,7 +68,7 @@ namespace PhanMemQuanLySinhVien
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(17, 333);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 46);
             this.btnThem.TabIndex = 17;
@@ -78,8 +78,8 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(607, 79);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTim.Location = new System.Drawing.Point(608, 84);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(86, 32);
             this.btnTim.TabIndex = 16;
@@ -89,11 +89,11 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTimMonHoc
             // 
-            this.txtTimMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimMonHoc.Location = new System.Drawing.Point(426, 81);
-            this.txtTimMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTimMonHoc.Location = new System.Drawing.Point(434, 89);
+            this.txtTimMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimMonHoc.Name = "txtTimMonHoc";
-            this.txtTimMonHoc.Size = new System.Drawing.Size(149, 24);
+            this.txtTimMonHoc.Size = new System.Drawing.Size(149, 22);
             this.txtTimMonHoc.TabIndex = 15;
             this.txtTimMonHoc.TextChanged += new System.EventHandler(this.txtTimMonHoc_TextChanged);
             // 
@@ -102,7 +102,7 @@ namespace PhanMemQuanLySinhVien
             this.dataGridViewMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMonHoc.Location = new System.Drawing.Point(300, 144);
-            this.dataGridViewMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewMonHoc.Name = "dataGridViewMonHoc";
             this.dataGridViewMonHoc.RowHeadersWidth = 51;
             this.dataGridViewMonHoc.RowTemplate.Height = 24;
@@ -112,21 +112,21 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTenMonHoc
             // 
-            this.txtTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenMonHoc.Location = new System.Drawing.Point(144, 249);
-            this.txtTenMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenMonHoc.Name = "txtTenMonHoc";
-            this.txtTenMonHoc.Size = new System.Drawing.Size(136, 24);
+            this.txtTenMonHoc.Size = new System.Drawing.Size(136, 22);
             this.txtTenMonHoc.TabIndex = 13;
             // 
             // txtMaMonHoc
             // 
-            this.txtMaMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaMonHoc.Location = new System.Drawing.Point(144, 199);
-            this.txtMaMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaMonHoc.Name = "txtMaMonHoc";
             this.txtMaMonHoc.ReadOnly = true;
-            this.txtMaMonHoc.Size = new System.Drawing.Size(100, 24);
+            this.txtMaMonHoc.Size = new System.Drawing.Size(100, 22);
             this.txtMaMonHoc.TabIndex = 12;
             // 
             // label2
