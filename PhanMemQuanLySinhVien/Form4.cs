@@ -31,7 +31,12 @@ namespace PhanMemQuanLySinhVien
                 s.LOP.KHOA.TenKhoa
             }
             ).ToList();
-      
+
+            cbLop.DisplayMember = "TenLop";//hiển thị cột TenLop lên Combo box
+            cbLop.ValueMember = "MaLop"; // Khi hiển thị rồi mà người dùng chọn thì nó lấy cột MaLop
+
+            cbLop.DataSource = qlsv.LOPs.ToList();//hiển thị dữ liệu từ DB lên combo box
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -65,10 +70,7 @@ namespace PhanMemQuanLySinhVien
         private void Form4_Load(object sender, EventArgs e)
         {
             loadData();
-            cbLop.DisplayMember = "TenLop";//hiển thị cột TenLop lên Combo box
-            cbLop.ValueMember = "MaLop"; // Khi hiển thị rồi mà người dùng chọn thì nó lấy cột MaLop
 
-            cbLop.DataSource = qlsv.LOPs.ToList();//hiển thị dữ liệu từ DB lên combo box
         }
 
         private void dateTimeNTNS_ValueChanged(object sender, EventArgs e)

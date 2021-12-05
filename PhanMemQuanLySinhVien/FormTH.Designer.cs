@@ -53,40 +53,35 @@ namespace PhanMemQuanLySinhVien
             this.panel1.Controls.Add(this.btnQuanLyLop);
             this.panel1.Controls.Add(this.btnQuanLyKhoa);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 453);
+            this.panel1.Size = new System.Drawing.Size(255, 557);
             this.panel1.TabIndex = 0;
             // 
             // lbTenNguoiDung
             // 
             this.lbTenNguoiDung.AutoSize = true;
-            this.lbTenNguoiDung.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNguoiDung.Location = new System.Drawing.Point(29, 37);
-            this.lbTenNguoiDung.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTenNguoiDung.Location = new System.Drawing.Point(130, 20);
             this.lbTenNguoiDung.Name = "lbTenNguoiDung";
-            this.lbTenNguoiDung.Size = new System.Drawing.Size(134, 23);
+            this.lbTenNguoiDung.Size = new System.Drawing.Size(99, 17);
             this.lbTenNguoiDung.TabIndex = 2;
             this.lbTenNguoiDung.Text = "@USERNAME";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Chào mừng đăng nhập ";
+            this.label1.Text = "Chào mừng ";
             // 
             // btnQLTTSV
             // 
             this.btnQLTTSV.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLTTSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLTTSV.Location = new System.Drawing.Point(0, 258);
-            this.btnQLTTSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQLTTSV.Location = new System.Drawing.Point(0, 318);
             this.btnQLTTSV.Name = "btnQLTTSV";
-            this.btnQLTTSV.Size = new System.Drawing.Size(190, 37);
+            this.btnQLTTSV.Size = new System.Drawing.Size(254, 46);
             this.btnQLTTSV.TabIndex = 1;
             this.btnQLTTSV.Text = "Quản lý thông tin sinh viên";
             this.btnQLTTSV.UseVisualStyleBackColor = false;
@@ -96,10 +91,9 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQLMH.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLMH.Location = new System.Drawing.Point(0, 225);
-            this.btnQLMH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQLMH.Location = new System.Drawing.Point(0, 277);
             this.btnQLMH.Name = "btnQLMH";
-            this.btnQLMH.Size = new System.Drawing.Size(190, 37);
+            this.btnQLMH.Size = new System.Drawing.Size(254, 46);
             this.btnQLMH.TabIndex = 1;
             this.btnQLMH.Text = "Quản lý môn học";
             this.btnQLMH.UseVisualStyleBackColor = false;
@@ -109,10 +103,9 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.MistyRose;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangXuat.Location = new System.Drawing.Point(-2, 415);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangXuat.Location = new System.Drawing.Point(-2, 511);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(193, 37);
+            this.btnDangXuat.Size = new System.Drawing.Size(257, 46);
             this.btnDangXuat.TabIndex = 1;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -122,10 +115,9 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQLDSV.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLDSV.Location = new System.Drawing.Point(0, 292);
-            this.btnQLDSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQLDSV.Location = new System.Drawing.Point(0, 360);
             this.btnQLDSV.Name = "btnQLDSV";
-            this.btnQLDSV.Size = new System.Drawing.Size(190, 37);
+            this.btnQLDSV.Size = new System.Drawing.Size(254, 46);
             this.btnQLDSV.TabIndex = 1;
             this.btnQLDSV.Text = "Quản lý điểm sinh viên";
             this.btnQLDSV.UseVisualStyleBackColor = false;
@@ -135,10 +127,9 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQuanLyLop.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuanLyLop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 191);
-            this.btnQuanLyLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 235);
             this.btnQuanLyLop.Name = "btnQuanLyLop";
-            this.btnQuanLyLop.Size = new System.Drawing.Size(190, 37);
+            this.btnQuanLyLop.Size = new System.Drawing.Size(254, 46);
             this.btnQuanLyLop.TabIndex = 1;
             this.btnQuanLyLop.Text = "Quản lý lớp";
             this.btnQuanLyLop.UseVisualStyleBackColor = false;
@@ -148,10 +139,9 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQuanLyKhoa.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuanLyKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 157);
-            this.btnQuanLyKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 193);
             this.btnQuanLyKhoa.Name = "btnQuanLyKhoa";
-            this.btnQuanLyKhoa.Size = new System.Drawing.Size(190, 37);
+            this.btnQuanLyKhoa.Size = new System.Drawing.Size(254, 46);
             this.btnQuanLyKhoa.TabIndex = 1;
             this.btnQuanLyKhoa.Text = "Quản lý khoa";
             this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
@@ -159,15 +149,14 @@ namespace PhanMemQuanLySinhVien
             // 
             // FormTH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(910, 457);
+            this.ClientSize = new System.Drawing.Size(1213, 563);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTH";
-            this.Padding = new System.Windows.Forms.Padding(191, 0, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(255, 0, 0, 0);
             this.Text = "FormTH";
             this.Load += new System.EventHandler(this.FormTH_Load);
             this.panel1.ResumeLayout(false);

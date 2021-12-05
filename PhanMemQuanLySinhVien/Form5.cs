@@ -24,6 +24,21 @@ namespace PhanMemQuanLySinhVien
         {
             loadData();
 
+        }
+
+        public void loadData()
+        {
+            var dssv = qlsv.SINHVIENs.Select(x => new
+            {
+                x.MaSV,
+                x.HoTen,
+                x.LOP.TenLop,
+                x.LOP.KHOA.TenKhoa
+            }).ToList();
+
+            dataGridViewTTSV.DataSource = dssv;
+
+
             cbLop.DisplayMember = "TenLop";//hiển thị cột TenLop lên Combo box
             cbLop.ValueMember = "MaLop"; // Khi hiển thị rồi mà người dùng chọn thì nó lấy cột MaLop
             cbLop.DataSource = qlsv.LOPs.ToList();//hiển thị dữ liệu từ DB lên combo
@@ -36,21 +51,6 @@ namespace PhanMemQuanLySinhVien
             cbMonHoc.DisplayMember = "TenMH";
             cbMonHoc.ValueMember = "MaMH";
             cbMonHoc.DataSource = qlsv.MONHOCs.ToList();
-
-        }
-
-        private void loadData()
-        {
-            var dssv = qlsv.SINHVIENs.Select(x => new
-            {
-                x.MaSV,
-                x.HoTen,
-                x.LOP.TenLop,
-                x.LOP.KHOA.TenKhoa
-            }).ToList();
-
-            dataGridViewTTSV.DataSource = dssv;
-
         }
 
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)

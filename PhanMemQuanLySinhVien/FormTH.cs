@@ -20,6 +20,7 @@ namespace PhanMemQuanLySinhVien
         Form4 form4;
         Form5 form5;
         Form6 form6;
+
         public FormTH(String UN)
         {
             InitializeComponent();
@@ -52,10 +53,24 @@ namespace PhanMemQuanLySinhVien
 
         private void btnQuanLyKhoa_Clicked()
         {
-            MessageBox.Show("S");
+            /*MessageBox.Show("S");*/
+
+            if(form1 == null){
+                form1 = new Form1();
+                form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form1.StartPosition = FormStartPosition.Manual;
+                form1.MdiParent = this;
+                form1.Show();
+            }
+            else
+            {
+                form1.loadData();
+                form1.Activate();
+            }
         }
         private void btnQuanLyLop_Clicked()
         {
+            
             if (form2 == null)
             {
                 form2 = new Form2();
@@ -66,10 +81,11 @@ namespace PhanMemQuanLySinhVien
             }
             else
             {
-                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
-                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form2.loadData();
                 form2.Activate();
             }
+
+
         }
         private void btnQLMH_Clicked()
         {
@@ -85,22 +101,61 @@ namespace PhanMemQuanLySinhVien
             {
                 //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
                 //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form3.loadData();
                 form3.Activate();
             }
         }
         private void btnQLTTSV_Clicked()
         {
-            MessageBox.Show("S");
+            /*MessageBox.Show("S");*/
+            if (form4 == null)
+            {
+                form4 = new Form4();
+                form4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form4.StartPosition = FormStartPosition.Manual;
+                form4.MdiParent = this;
+                form4.Show();
+            }
+            else
+            {
+                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
+                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form4.loadData();
+                form4.Activate();
+            }
+
         }
         private void btnQLDSV_Clicked()
         {
-            MessageBox.Show("S");
+            /* MessageBox.Show("S");*/
+            if (form5 == null)
+            {
+                form5 = new Form5();
+                form5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form5.StartPosition = FormStartPosition.Manual;
+                form5.MdiParent = this;
+                form5.Show();
+            }
+            else
+            {
+                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
+                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form5.loadData();
+                form5.Activate();
+            }
+
         }
         private void btnDangXuat_Clicked()
         {
-            this.Close();
-            form6 = new Form6();
-            form6.Show();
+            /*MessageBox.Show("S");*/
+            if (form6 == null)
+            {
+                form6 = new Form6();
+                this.Close();
+                form6.StartPosition = FormStartPosition.CenterScreen;
+                form6.Show();
+            }
+            
         }
 
         private void FormTH_Load(object sender, EventArgs e)
