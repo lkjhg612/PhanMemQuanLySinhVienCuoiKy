@@ -19,7 +19,7 @@ namespace PhanMemQuanLySinhVien
             InitializeComponent();
         }
 
-        private void loadData()
+        public void loadData()
         {
             dataGridViewMonHoc.DataSource = qlsv.MONHOCs.Select(s => new 
             {

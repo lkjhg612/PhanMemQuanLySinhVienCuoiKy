@@ -30,6 +30,8 @@ namespace PhanMemQuanLySinhVien
             KHOA kHOA = qlsv.KHOAs.Where(h => h.MaKhoa == stt).First();
             kHOA.TenKhoa = txtTenKhoa.Text;
 
+            qlsv.SaveChanges();
+
             loadData();
         }
 
