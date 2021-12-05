@@ -62,24 +62,26 @@ namespace PhanMemQuanLySinhVien
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(256, 81);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(188, 22);
             this.txtTenDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.Text = "cuong123";
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(256, 144);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(188, 22);
             this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.Text = "123123";
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(256, 209);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(167, 37);
             this.btnDangNhap.TabIndex = 3;
@@ -109,7 +111,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form6";
             this.Text = "Form6";
             this.Load += new System.EventHandler(this.Form6_Load);

@@ -30,14 +30,14 @@ namespace PhanMemQuanLySinhVien
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnQuanLyKhoa = new System.Windows.Forms.Button();
-            this.btnQuanLyLop = new System.Windows.Forms.Button();
-            this.btnQLDSV = new System.Windows.Forms.Button();
-            this.btnQLMH = new System.Windows.Forms.Button();
-            this.btnQLTTSV = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbTenNguoiDung = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnQLTTSV = new System.Windows.Forms.Button();
+            this.btnQLMH = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnQLDSV = new System.Windows.Forms.Button();
+            this.btnQuanLyLop = new System.Windows.Forms.Button();
+            this.btnQuanLyKhoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,53 +57,23 @@ namespace PhanMemQuanLySinhVien
             this.panel1.Size = new System.Drawing.Size(255, 557);
             this.panel1.TabIndex = 0;
             // 
-            // btnQuanLyKhoa
+            // lbTenNguoiDung
             // 
-            this.btnQuanLyKhoa.BackColor = System.Drawing.Color.MistyRose;
-            this.btnQuanLyKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 193);
-            this.btnQuanLyKhoa.Name = "btnQuanLyKhoa";
-            this.btnQuanLyKhoa.Size = new System.Drawing.Size(254, 46);
-            this.btnQuanLyKhoa.TabIndex = 1;
-            this.btnQuanLyKhoa.Text = "Quản lý khoa";
-            this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
-            this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
+            this.lbTenNguoiDung.AutoSize = true;
+            this.lbTenNguoiDung.Location = new System.Drawing.Point(130, 20);
+            this.lbTenNguoiDung.Name = "lbTenNguoiDung";
+            this.lbTenNguoiDung.Size = new System.Drawing.Size(99, 17);
+            this.lbTenNguoiDung.TabIndex = 2;
+            this.lbTenNguoiDung.Text = "@USERNAME";
             // 
-            // btnQuanLyLop
+            // label1
             // 
-            this.btnQuanLyLop.BackColor = System.Drawing.Color.MistyRose;
-            this.btnQuanLyLop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 235);
-            this.btnQuanLyLop.Name = "btnQuanLyLop";
-            this.btnQuanLyLop.Size = new System.Drawing.Size(254, 46);
-            this.btnQuanLyLop.TabIndex = 1;
-            this.btnQuanLyLop.Text = "Quản lý lớp";
-            this.btnQuanLyLop.UseVisualStyleBackColor = false;
-            this.btnQuanLyLop.Click += new System.EventHandler(this.AllBtn_Click);
-            // 
-            // btnQLDSV
-            // 
-            this.btnQLDSV.BackColor = System.Drawing.Color.MistyRose;
-            this.btnQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLDSV.Location = new System.Drawing.Point(0, 360);
-            this.btnQLDSV.Name = "btnQLDSV";
-            this.btnQLDSV.Size = new System.Drawing.Size(254, 46);
-            this.btnQLDSV.TabIndex = 1;
-            this.btnQLDSV.Text = "Quản lý điểm sinh viên";
-            this.btnQLDSV.UseVisualStyleBackColor = false;
-            this.btnQLDSV.Click += new System.EventHandler(this.AllBtn_Click);
-            // 
-            // btnQLMH
-            // 
-            this.btnQLMH.BackColor = System.Drawing.Color.MistyRose;
-            this.btnQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLMH.Location = new System.Drawing.Point(0, 277);
-            this.btnQLMH.Name = "btnQLMH";
-            this.btnQLMH.Size = new System.Drawing.Size(254, 46);
-            this.btnQLMH.TabIndex = 1;
-            this.btnQLMH.Text = "Quản lý môn học";
-            this.btnQLMH.UseVisualStyleBackColor = false;
-            this.btnQLMH.Click += new System.EventHandler(this.AllBtn_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Chào mừng ";
             // 
             // btnQLTTSV
             // 
@@ -117,23 +87,17 @@ namespace PhanMemQuanLySinhVien
             this.btnQLTTSV.UseVisualStyleBackColor = false;
             this.btnQLTTSV.Click += new System.EventHandler(this.AllBtn_Click);
             // 
-            // label1
+            // btnQLMH
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Chào mừng ";
-            // 
-            // lbTenNguoiDung
-            // 
-            this.lbTenNguoiDung.AutoSize = true;
-            this.lbTenNguoiDung.Location = new System.Drawing.Point(130, 20);
-            this.lbTenNguoiDung.Name = "lbTenNguoiDung";
-            this.lbTenNguoiDung.Size = new System.Drawing.Size(99, 17);
-            this.lbTenNguoiDung.TabIndex = 2;
-            this.lbTenNguoiDung.Text = "@USERNAME";
+            this.btnQLMH.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLMH.Location = new System.Drawing.Point(0, 277);
+            this.btnQLMH.Name = "btnQLMH";
+            this.btnQLMH.Size = new System.Drawing.Size(254, 46);
+            this.btnQLMH.TabIndex = 1;
+            this.btnQLMH.Text = "Quản lý môn học";
+            this.btnQLMH.UseVisualStyleBackColor = false;
+            this.btnQLMH.Click += new System.EventHandler(this.AllBtn_Click);
             // 
             // btnDangXuat
             // 
@@ -146,6 +110,42 @@ namespace PhanMemQuanLySinhVien
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // btnQLDSV
+            // 
+            this.btnQLDSV.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLDSV.Location = new System.Drawing.Point(0, 360);
+            this.btnQLDSV.Name = "btnQLDSV";
+            this.btnQLDSV.Size = new System.Drawing.Size(254, 46);
+            this.btnQLDSV.TabIndex = 1;
+            this.btnQLDSV.Text = "Quản lý điểm sinh viên";
+            this.btnQLDSV.UseVisualStyleBackColor = false;
+            this.btnQLDSV.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // btnQuanLyLop
+            // 
+            this.btnQuanLyLop.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQuanLyLop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 235);
+            this.btnQuanLyLop.Name = "btnQuanLyLop";
+            this.btnQuanLyLop.Size = new System.Drawing.Size(254, 46);
+            this.btnQuanLyLop.TabIndex = 1;
+            this.btnQuanLyLop.Text = "Quản lý lớp";
+            this.btnQuanLyLop.UseVisualStyleBackColor = false;
+            this.btnQuanLyLop.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // btnQuanLyKhoa
+            // 
+            this.btnQuanLyKhoa.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQuanLyKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 193);
+            this.btnQuanLyKhoa.Name = "btnQuanLyKhoa";
+            this.btnQuanLyKhoa.Size = new System.Drawing.Size(254, 46);
+            this.btnQuanLyKhoa.TabIndex = 1;
+            this.btnQuanLyKhoa.Text = "Quản lý khoa";
+            this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
+            this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
             // 
             // FormTH
             // 

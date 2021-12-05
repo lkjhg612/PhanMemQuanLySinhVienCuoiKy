@@ -32,14 +32,16 @@ namespace PhanMemQuanLySinhVien
                 s.TenLop,
                 s.KHOA.TenKhoa
             }).ToList();
+
+            cbKhoa.DisplayMember = "TenKhoa";
+            cbKhoa.ValueMember = "MaKhoa";
+            cbKhoa.DataSource = qlsv.KHOAs.ToList();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             loadData();
-            cbKhoa.DisplayMember = "TenKhoa";
-            cbKhoa.ValueMember = "MaKhoa";
-            cbKhoa.DataSource = qlsv.KHOAs.ToList();
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
