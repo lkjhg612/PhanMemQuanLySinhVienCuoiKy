@@ -457,9 +457,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dataGridViewTTSV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbMonHoc;
@@ -469,8 +466,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.TextBox txtDiemCK;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.ComboBox cbLop;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -482,5 +477,10 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.DataGridView dataGridViewDiemSV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button btnXoa;
+        public System.Windows.Forms.Button btnSua;
+        public System.Windows.Forms.Button btnThem;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox groupBox2;
     }
 }

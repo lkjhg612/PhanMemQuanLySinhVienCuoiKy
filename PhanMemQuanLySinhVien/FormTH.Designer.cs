@@ -174,7 +174,7 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnQLMH;
         private System.Windows.Forms.Button btnQLDSV;
         private System.Windows.Forms.Button btnQuanLyLop;
-        private System.Windows.Forms.Button btnQuanLyKhoa;
         private System.Windows.Forms.Button btnDangXuat;
+        public System.Windows.Forms.Button btnQuanLyKhoa;
     }
 }

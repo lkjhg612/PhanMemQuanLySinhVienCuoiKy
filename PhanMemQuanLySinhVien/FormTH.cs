@@ -12,7 +12,8 @@ namespace PhanMemQuanLySinhVien
 {
     public partial class FormTH : Form
     {
-        String username;
+        NGUOIDUNG nd;
+        int? id_Quyen;
 
         Form1 form1;
         Form2 form2;
@@ -21,10 +22,10 @@ namespace PhanMemQuanLySinhVien
         Form5 form5;
         Form6 form6;
 
-        public FormTH(String UN)
+        public FormTH(NGUOIDUNG nd)
         {
             InitializeComponent();
-            username = UN;
+            this.nd = nd;
         }
 
         private void AllBtn_Click(object sender, EventArgs e)
@@ -110,10 +111,23 @@ namespace PhanMemQuanLySinhVien
             /*MessageBox.Show("S");*/
             if (form4 == null)
             {
-                form4 = new Form4();
+                form4 =  new Form4();
                 form4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form4.StartPosition = FormStartPosition.Manual;
                 form4.MdiParent = this;
+                if (id_Quyen == 2)
+                {
+                    form4.btnThem.Enabled = false;
+                    form4.btnSua.Enabled = false;
+                    form4.btnXoa.Enabled = false;
+                    LockEnable(form4.txtDiaChi);
+                    LockEnable(form4.txtHoTen);
+                    LockEnable(form4.cbLop);
+                    LockEnable(form4.dateTimeNTNS);
+                    LockEnable(form4.rbtnNam);
+                    LockEnable(form4.rbtnNu);
+                }
+
                 form4.Show();
             }
             else
@@ -134,6 +148,18 @@ namespace PhanMemQuanLySinhVien
                 form5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form5.StartPosition = FormStartPosition.Manual;
                 form5.MdiParent = this;
+                
+
+                if(id_Quyen == 2)
+                {
+                    form5.btnThem.Enabled = false;
+                    form5.btnSua.Enabled = false;
+                    form5.btnXoa.Enabled = false;
+
+                    LockEnable(form5.groupBox1);
+                    LockEnable(form5.groupBox2);
+                }
+
                 form5.Show();
             }
             else
@@ -160,7 +186,22 @@ namespace PhanMemQuanLySinhVien
 
         private void FormTH_Load(object sender, EventArgs e)
         {
-            lbTenNguoiDung.Text = username;
+            lbTenNguoiDung.Text = nd.TenNguoiDung;
+            id_Quyen = nd.ID_Quyen;
+
+            if (id_Quyen == 2)
+            {
+                btnQuanLyKhoa.Enabled = false;
+                btnQuanLyLop.Enabled = false;    
+                btnQLMH.Enabled = false;
+
+            }
+
+        }
+
+        private void LockEnable(Control control)
+        {
+            control.Enabled = false;
         }
     }
 }

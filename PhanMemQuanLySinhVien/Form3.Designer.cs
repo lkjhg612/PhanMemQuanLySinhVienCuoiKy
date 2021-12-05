@@ -112,9 +112,12 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTenMonHoc
             // 
-            this.txtTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenMonHoc.Location = new System.Drawing.Point(144, 249);
-            this.txtTenMonHoc.Margin = new System.Windows.Forms.Padding(2);
+
+            this.txtTenMonHoc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenMonHoc.Location = new System.Drawing.Point(186, 266);
+            this.txtTenMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(136, 22);
             this.txtTenMonHoc.TabIndex = 13;

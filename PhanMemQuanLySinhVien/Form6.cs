@@ -38,8 +38,8 @@ namespace PhanMemQuanLySinhVien
             } else
             {
                 NGUOIDUNG ND = users.First(); //Lấy phần tử đầu tiên của list users và gán vào biến nd có kiểu NGUOIDUNG
-                String tenNgdung = ND.TenNguoiDung;
-                FormTH formTH = new FormTH(tenNgdung);
+
+                FormTH formTH = new FormTH(ND);
                 formTH.Show();
                 this.Hide();
             }
