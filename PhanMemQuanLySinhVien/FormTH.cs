@@ -21,6 +21,7 @@ namespace PhanMemQuanLySinhVien
         Form4 form4;
         Form5 form5;
         Form6 form6;
+        Form7 form7;
 
         public FormTH(NGUOIDUNG nd)
         {
@@ -46,7 +47,7 @@ namespace PhanMemQuanLySinhVien
                 case "btnQLTTSV": btnQLTTSV_Clicked(); break;
                 case "btnQLDSV": btnQLDSV_Clicked(); break;
                 case "btnDangXuat": btnDangXuat_Clicked() ; break;
-
+                case "btnQLND": btnQLND_Clicked(); break;
             }
 
 
@@ -182,6 +183,25 @@ namespace PhanMemQuanLySinhVien
                 form6.Show();
             }
             
+        }
+
+        private void btnQLND_Clicked()
+        {
+            if (form7 == null)
+            {
+                form7 = new Form7();
+                form7.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form7.StartPosition = FormStartPosition.Manual;
+                form7.MdiParent = this;
+                form7.Show();
+            }
+            else
+            {
+                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
+                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                form7.loadData();
+                form7.Activate();
+            }
         }
 
         private void FormTH_Load(object sender, EventArgs e)
