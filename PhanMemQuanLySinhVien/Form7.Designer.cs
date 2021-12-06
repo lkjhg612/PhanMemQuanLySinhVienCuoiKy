@@ -94,6 +94,7 @@ namespace PhanMemQuanLySinhVien
             this.dataGridViewND.RowTemplate.Height = 24;
             this.dataGridViewND.Size = new System.Drawing.Size(490, 308);
             this.dataGridViewND.TabIndex = 4;
+            this.dataGridViewND.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewND_CellDoubleClick);
             // 
             // txtID
             // 
@@ -132,6 +133,7 @@ namespace PhanMemQuanLySinhVien
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -141,6 +143,7 @@ namespace PhanMemQuanLySinhVien
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
