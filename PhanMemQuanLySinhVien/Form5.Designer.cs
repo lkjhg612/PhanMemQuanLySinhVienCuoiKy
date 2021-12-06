@@ -108,7 +108,7 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(125, 444);
+            this.btnSua.Location = new System.Drawing.Point(122, 454);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
@@ -119,7 +119,7 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(12, 444);
+            this.btnThem.Location = new System.Drawing.Point(9, 454);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 34);
@@ -130,7 +130,7 @@ namespace PhanMemQuanLySinhVien
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(246, 444);
+            this.btnXoa.Location = new System.Drawing.Point(243, 454);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 34);
@@ -159,7 +159,7 @@ namespace PhanMemQuanLySinhVien
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTTSV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTTSV.Location = new System.Drawing.Point(346, 72);
+            this.dataGridViewTTSV.Location = new System.Drawing.Point(343, 82);
             this.dataGridViewTTSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewTTSV.Name = "dataGridViewTTSV";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@ namespace PhanMemQuanLySinhVien
             // 
             // txtTim
             // 
-            this.txtTim.Location = new System.Drawing.Point(713, 31);
+            this.txtTim.Location = new System.Drawing.Point(710, 41);
             this.txtTim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(217, 22);
@@ -241,7 +241,7 @@ namespace PhanMemQuanLySinhVien
             this.cbLop.FormattingEnabled = true;
             this.cbLop.Items.AddRange(new object[] {
             "Xem tất cả"});
-            this.cbLop.Location = new System.Drawing.Point(75, 28);
+            this.cbLop.Location = new System.Drawing.Point(72, 38);
             this.cbLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLop.Name = "cbLop";
             this.cbLop.Size = new System.Drawing.Size(125, 24);
@@ -261,7 +261,7 @@ namespace PhanMemQuanLySinhVien
             this.groupBox1.Controls.Add(this.txtDiemQT);
             this.groupBox1.Controls.Add(this.cbMonHoc);
             this.groupBox1.Controls.Add(this.txtMaSV);
-            this.groupBox1.Location = new System.Drawing.Point(12, 225);
+            this.groupBox1.Location = new System.Drawing.Point(9, 235);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -278,7 +278,7 @@ namespace PhanMemQuanLySinhVien
             this.groupBox2.Controls.Add(this.txtMaSinhVien);
             this.groupBox2.Controls.Add(this.txtTen);
             this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Location = new System.Drawing.Point(12, 84);
+            this.groupBox2.Location = new System.Drawing.Point(9, 94);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -345,7 +345,7 @@ namespace PhanMemQuanLySinhVien
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(220, 31);
+            this.label10.Location = new System.Drawing.Point(217, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 17);
             this.label10.TabIndex = 3;
@@ -355,7 +355,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.cbKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(283, 28);
+            this.cbKhoa.Location = new System.Drawing.Point(280, 38);
             this.cbKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(143, 24);
@@ -383,7 +383,7 @@ namespace PhanMemQuanLySinhVien
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewDiemSV.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewDiemSV.Location = new System.Drawing.Point(346, 277);
+            this.dataGridViewDiemSV.Location = new System.Drawing.Point(343, 287);
             this.dataGridViewDiemSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewDiemSV.Name = "dataGridViewDiemSV";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -403,7 +403,7 @@ namespace PhanMemQuanLySinhVien
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 31);
+            this.label6.Location = new System.Drawing.Point(24, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 17);
             this.label6.TabIndex = 3;
@@ -412,7 +412,7 @@ namespace PhanMemQuanLySinhVien
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(634, 36);
+            this.label11.Location = new System.Drawing.Point(631, 46);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 17);
             this.label11.TabIndex = 3;
