@@ -44,5 +44,34 @@ namespace PhanMemQuanLySinhVien
         {
             loadData();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32( txtID.Text);
+
+            var st = qlsv.NGUOIDUNGs.Find(id);
+            qlsv.NGUOIDUNGs.Remove(st);
+            qlsv.SaveChanges();
+            loadData();
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            String seach = txtTim.Text;
+            if (String.IsNullOrEmpty(seach))
+            {
+                loadData();
+            } else
+            {
+                dataGridViewND.DataSource = qlsv.NGUOIDUNGs.Where(x => x.TenNguoiDung.Contains(seach)).Select(x => new
+                {
+                    x.ID_ND,
+                    x.TenNguoiDung,
+                    x.TaiKhoan,
+                    x.MatKhau,
+                    x.QUYEN.TenQuyen
+                }).ToList();
+            }
+        }
     }
 }
