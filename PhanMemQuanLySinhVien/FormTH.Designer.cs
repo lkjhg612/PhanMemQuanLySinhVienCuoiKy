@@ -38,6 +38,7 @@ namespace PhanMemQuanLySinhVien
             this.btnQLDSV = new System.Windows.Forms.Button();
             this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnQuanLyKhoa = new System.Windows.Forms.Button();
+            this.btnQLND = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace PhanMemQuanLySinhVien
             this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.btnQLDSV);
             this.panel1.Controls.Add(this.btnQuanLyLop);
+            this.panel1.Controls.Add(this.btnQLND);
             this.panel1.Controls.Add(this.btnQuanLyKhoa);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
@@ -79,7 +81,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQLTTSV.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLTTSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLTTSV.Location = new System.Drawing.Point(0, 318);
+            this.btnQLTTSV.Location = new System.Drawing.Point(0, 260);
             this.btnQLTTSV.Name = "btnQLTTSV";
             this.btnQLTTSV.Size = new System.Drawing.Size(254, 46);
             this.btnQLTTSV.TabIndex = 1;
@@ -91,7 +93,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQLMH.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLMH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLMH.Location = new System.Drawing.Point(0, 277);
+            this.btnQLMH.Location = new System.Drawing.Point(0, 219);
             this.btnQLMH.Name = "btnQLMH";
             this.btnQLMH.Size = new System.Drawing.Size(254, 46);
             this.btnQLMH.TabIndex = 1;
@@ -115,7 +117,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQLDSV.BackColor = System.Drawing.Color.MistyRose;
             this.btnQLDSV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLDSV.Location = new System.Drawing.Point(0, 360);
+            this.btnQLDSV.Location = new System.Drawing.Point(0, 302);
             this.btnQLDSV.Name = "btnQLDSV";
             this.btnQLDSV.Size = new System.Drawing.Size(254, 46);
             this.btnQLDSV.TabIndex = 1;
@@ -127,7 +129,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQuanLyLop.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuanLyLop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 235);
+            this.btnQuanLyLop.Location = new System.Drawing.Point(0, 177);
             this.btnQuanLyLop.Name = "btnQuanLyLop";
             this.btnQuanLyLop.Size = new System.Drawing.Size(254, 46);
             this.btnQuanLyLop.TabIndex = 1;
@@ -139,13 +141,25 @@ namespace PhanMemQuanLySinhVien
             // 
             this.btnQuanLyKhoa.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuanLyKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 193);
+            this.btnQuanLyKhoa.Location = new System.Drawing.Point(0, 135);
             this.btnQuanLyKhoa.Name = "btnQuanLyKhoa";
             this.btnQuanLyKhoa.Size = new System.Drawing.Size(254, 46);
             this.btnQuanLyKhoa.TabIndex = 1;
             this.btnQuanLyKhoa.Text = "Quản lý khoa";
             this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
             this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // btnQLND
+            // 
+            this.btnQLND.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQLND.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLND.Location = new System.Drawing.Point(1, 469);
+            this.btnQLND.Name = "btnQLND";
+            this.btnQLND.Size = new System.Drawing.Size(254, 46);
+            this.btnQLND.TabIndex = 1;
+            this.btnQLND.Text = "Quản lý người dùng";
+            this.btnQLND.UseVisualStyleBackColor = false;
+            this.btnQLND.Click += new System.EventHandler(this.AllBtn_Click);
             // 
             // FormTH
             // 
@@ -176,5 +190,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnQuanLyLop;
         private System.Windows.Forms.Button btnDangXuat;
         public System.Windows.Forms.Button btnQuanLyKhoa;
+        public System.Windows.Forms.Button btnQLND;
     }
 }
