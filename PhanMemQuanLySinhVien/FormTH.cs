@@ -222,6 +222,7 @@ namespace PhanMemQuanLySinhVien
         private void LockEnable(Control control)
         {
             control.Enabled = false;
+            //control.Enable
         }
     }
 }

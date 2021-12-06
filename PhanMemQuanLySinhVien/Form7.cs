@@ -46,6 +46,7 @@ namespace PhanMemQuanLySinhVien
             loadData();
         }
 
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             NGUOIDUNG nd = new NGUOIDUNG();
@@ -55,9 +56,18 @@ namespace PhanMemQuanLySinhVien
             nd.ID_Quyen = Convert.ToInt32(cbQuyen.SelectedValue.ToString());
 
             qlsv.NGUOIDUNGs.Add(nd);
+		}
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32( txtID.Text);
+
+            var st = qlsv.NGUOIDUNGs.Find(id);
+            qlsv.NGUOIDUNGs.Remove(st);
             qlsv.SaveChanges();
             loadData();
         }
+
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -82,6 +92,25 @@ namespace PhanMemQuanLySinhVien
             txtTaiKhoan.Text = (dataGridViewND.Rows[e.RowIndex].Cells["TaiKhoan"].Value.ToString());
             txtMatKhau.Text = (dataGridViewND.Rows[e.RowIndex].Cells["MatKhau"].Value.ToString());
             cbQuyen.Text = (dataGridViewND.Rows[e.RowIndex].Cells["TenQuyen"].Value.ToString());
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            String seach = txtTim.Text;
+            if (String.IsNullOrEmpty(seach))
+            {
+                loadData();
+            } else
+            {
+                dataGridViewND.DataSource = qlsv.NGUOIDUNGs.Where(x => x.TenNguoiDung.Contains(seach)).Select(x => new
+                {
+                    x.ID_ND,
+                    x.TenNguoiDung,
+                    x.TaiKhoan,
+                    x.MatKhau,
+                    x.QUYEN.TenQuyen
+                }).ToList();
+            }
+
         }
     }
 }
