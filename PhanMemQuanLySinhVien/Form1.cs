@@ -61,6 +61,8 @@ namespace PhanMemQuanLySinhVien
         private void Form1_Load(object sender, EventArgs e)
         {
             loadData();
+            loadData();
+            Load();
         }
 
         private void dataGridViewKhoa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
