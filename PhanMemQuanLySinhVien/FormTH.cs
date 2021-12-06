@@ -116,7 +116,7 @@ namespace PhanMemQuanLySinhVien
                 form4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form4.StartPosition = FormStartPosition.Manual;
                 form4.MdiParent = this;
-                if (id_Quyen == 2)
+                if (id_Quyen == 3)
                 {
                     form4.btnThem.Enabled = false;
                     form4.btnSua.Enabled = false;
@@ -151,7 +151,7 @@ namespace PhanMemQuanLySinhVien
                 form5.MdiParent = this;
                 
 
-                if(id_Quyen == 2)
+                if(id_Quyen == 3)
                 {
                     form5.btnThem.Enabled = false;
                     form5.btnSua.Enabled = false;
@@ -207,14 +207,22 @@ namespace PhanMemQuanLySinhVien
         private void FormTH_Load(object sender, EventArgs e)
         {
             lbTenNguoiDung.Text = nd.TenNguoiDung;
+            lbDoiTuongDN.Text = nd.QUYEN.MoTa;
             id_Quyen = nd.ID_Quyen;
 
-            if (id_Quyen == 2)
+            if (id_Quyen == 3)
             {
                 btnQuanLyKhoa.Enabled = false;
                 btnQuanLyLop.Enabled = false;    
                 btnQLMH.Enabled = false;
+                btnQLND.Enabled = false;
 
+            } else if (id_Quyen == 2)
+            {
+                btnQuanLyKhoa.Enabled = false;
+                btnQuanLyLop.Enabled = false;
+                btnQLMH.Enabled = false;
+                btnQLND.Enabled = false;
             }
 
         }
@@ -223,6 +231,11 @@ namespace PhanMemQuanLySinhVien
         {
             control.Enabled = false;
             //control.Enable
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
