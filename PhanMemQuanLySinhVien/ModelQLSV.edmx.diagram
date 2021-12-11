@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="c96cfdd429bf4d90b1fc972ce937e187" Name="Diagram1">
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.DIEM" Width="1.5" PointX="7.625" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="0.625" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.LOP" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="5.375" PointY="4.25" IsExpanded="true" />

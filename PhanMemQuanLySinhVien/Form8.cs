@@ -14,6 +14,7 @@ namespace PhanMemQuanLySinhVien
     {
         QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
         NGUOIDUNG user;
+       
         public Form8(NGUOIDUNG nd)
         {
             InitializeComponent();
@@ -58,11 +59,40 @@ namespace PhanMemQuanLySinhVien
             int soLuong = listDiem.Count();
             foreach (var d in listDiem)
             {
-                tong += Convert.ToInt32(d.DiemTB);
+                tong += Convert.ToDouble(d.DiemTB);
             }
 
             txtDiemTrungBinh.Text =(Convert.ToDouble(tong/soLuong)).ToString();
+
+            double diemtb = Convert.ToDouble(txtDiemTrungBinh.Text);
+             txtXepLoai.Text =  xepLoai(diemtb);
+            
         }
+
+        private String xepLoai(double diemtb)
+        {
+            String xeploai = null;
+            if (diemtb < 4)
+            {
+                xeploai = "Yếu";
+            }
+            else if (diemtb >= 4 && diemtb < 6)
+            {
+                xeploai = "Trung bình";
+            }
+            else if (diemtb >= 6 && diemtb < 8)
+            {
+                xeploai = "Khá";
+            }
+            else
+            {
+                xeploai = "Giỏi";
+            }
+            return xeploai;
+        }
+
+        
+      
 
 
 
