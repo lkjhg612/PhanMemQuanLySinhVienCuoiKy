@@ -108,16 +108,15 @@ namespace PhanMemQuanLySinhVien
             this.dataGridViewMonHoc.RowTemplate.Height = 24;
             this.dataGridViewMonHoc.Size = new System.Drawing.Size(525, 305);
             this.dataGridViewMonHoc.TabIndex = 14;
+            this.dataGridViewMonHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMonHoc_CellContentClick);
             this.dataGridViewMonHoc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMonHoc_CellDoubleClick);
             // 
             // txtTenMonHoc
             // 
-
             this.txtTenMonHoc.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenMonHoc.Location = new System.Drawing.Point(186, 266);
             this.txtTenMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(180, 30);
             this.txtTenMonHoc.TabIndex = 13;

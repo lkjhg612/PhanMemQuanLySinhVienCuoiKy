@@ -6,18 +6,19 @@
     <edmx:Diagrams>
       <Diagram DiagramId="c96cfdd429bf4d90b1fc972ce937e187" Name="Diagram1">
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.DIEM" Width="1.5" PointX="7.625" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="3.875" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.LOP" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="6.125" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="7.375" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.QUYEN" Width="1.5" PointX="4.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.LOP" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="5.375" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.QUYEN" Width="1.5" PointX="3.125" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.SINHVIEN" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.sysdiagram" Width="1.5" PointX="1.625" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.sysdiagram" Width="1.5" PointX="9.625" PointY="3.625" IsExpanded="true" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_MONHOC1" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_SINHVIEN1" ManuallyRouted="false" ></AssociationConnector>
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_LOP_KHOA1" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_SINHVIEN_LOP1" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_QUYEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_SINHVIEN" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

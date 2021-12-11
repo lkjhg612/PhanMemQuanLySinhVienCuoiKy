@@ -18,6 +18,7 @@ namespace PhanMemQuanLySinhVien
         public SINHVIEN()
         {
             this.DIEMs = new HashSet<DIEM>();
+            this.NGUOIDUNGs = new HashSet<NGUOIDUNG>();
         }
     
         public int MaSV { get; set; }
@@ -30,5 +31,7 @@ namespace PhanMemQuanLySinhVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
         public virtual LOP LOP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NGUOIDUNG> NGUOIDUNGs { get; set; }
     }
 }

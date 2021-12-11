@@ -19,7 +19,9 @@ namespace PhanMemQuanLySinhVien
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public Nullable<int> ID_Quyen { get; set; }
+        public Nullable<int> MaSV { get; set; }
     
         public virtual QUYEN QUYEN { get; set; }
+        public virtual SINHVIEN SINHVIEN { get; set; }
     }
 }

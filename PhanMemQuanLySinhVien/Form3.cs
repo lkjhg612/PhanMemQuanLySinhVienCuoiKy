@@ -82,5 +82,10 @@ namespace PhanMemQuanLySinhVien
             }
 
         }
+
+        private void dataGridViewMonHoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

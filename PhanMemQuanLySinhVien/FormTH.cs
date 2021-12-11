@@ -22,12 +22,15 @@ namespace PhanMemQuanLySinhVien
         Form5 form5;
         Form6 form6;
         Form7 form7;
+        Form8 form8;
 
         public FormTH(NGUOIDUNG nd)
         {
             InitializeComponent();
             this.nd = nd;
         }
+
+
 
         private void AllBtn_Click(object sender, EventArgs e)
         {
@@ -116,18 +119,6 @@ namespace PhanMemQuanLySinhVien
                 form4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form4.StartPosition = FormStartPosition.Manual;
                 form4.MdiParent = this;
-                if (id_Quyen == 3)
-                {
-                    form4.btnThem.Enabled = false;
-                    form4.btnSua.Enabled = false;
-                    form4.btnXoa.Enabled = false;
-                    LockEnable(form4.txtDiaChi);
-                    LockEnable(form4.txtHoTen);
-                    LockEnable(form4.cbLop);
-                    LockEnable(form4.dateTimeNTNS);
-                    LockEnable(form4.rbtnNam);
-                    LockEnable(form4.rbtnNu);
-                }
 
                 form4.Show();
             }
@@ -149,17 +140,6 @@ namespace PhanMemQuanLySinhVien
                 form5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form5.StartPosition = FormStartPosition.Manual;
                 form5.MdiParent = this;
-                
-
-                if(id_Quyen == 3)
-                {
-                    form5.btnThem.Enabled = false;
-                    form5.btnSua.Enabled = false;
-                    form5.btnXoa.Enabled = false;
-
-                    LockEnable(form5.groupBox1);
-                    LockEnable(form5.groupBox2);
-                }
 
                 form5.Show();
             }
@@ -208,14 +188,33 @@ namespace PhanMemQuanLySinhVien
         {
             lbTenNguoiDung.Text = nd.TenNguoiDung;
             lbDoiTuongDN.Text = nd.QUYEN.MoTa;
+
+
             id_Quyen = nd.ID_Quyen;
 
             if (id_Quyen == 3)
             {
-                btnQuanLyKhoa.Enabled = false;
-                btnQuanLyLop.Enabled = false;    
-                btnQLMH.Enabled = false;
-                btnQLND.Enabled = false;
+                btnQuanLyKhoa.Visible = false;
+                btnQuanLyLop.Visible = false;
+                btnQLDSV.Visible = false;
+                btnQLND.Visible = false;
+                btnQLDSV.Visible = false;
+                btnQLMH.Visible = false;
+                btnQLTTSV.Visible = false;
+
+
+                if (form8 == null)
+                {
+                    form8 = new Form8(nd);
+                    form8.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                    form8.StartPosition = FormStartPosition.Manual;
+                    form8.MdiParent = this;
+                    form8.Show();
+                }
+                else
+                {
+                    form8.Activate();
+                }
 
             } else if (id_Quyen == 2)
             {
