@@ -150,6 +150,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
+    <Compile Include="THOIKHOABIEU.cs">
+      <DependentUpon>ModelQLSV.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

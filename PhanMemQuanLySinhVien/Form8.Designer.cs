@@ -51,6 +51,7 @@ namespace PhanMemQuanLySinhVien
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiemSinhVien)).BeginInit();
@@ -310,11 +311,20 @@ namespace PhanMemQuanLySinhVien
             this.label9.TabIndex = 19;
             this.label9.Text = "THÔNG TIN SINH VIÊN";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(121, 450);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 553);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -356,5 +366,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtLop;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

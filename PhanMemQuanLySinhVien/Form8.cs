@@ -24,6 +24,7 @@ namespace PhanMemQuanLySinhVien
 
         private void Form8_Load(object sender, EventArgs e)
         {
+
             txtMaSinhVien.Text = user.SINHVIEN.MaSV.ToString();
             txtHoTen.Text = user.SINHVIEN.HoTen;
             txtLop.Text = user.SINHVIEN.LOP.TenLop;

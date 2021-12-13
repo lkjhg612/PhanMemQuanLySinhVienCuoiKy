@@ -78,6 +78,18 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="MaMH" />
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaMH" Type="int" Nullable="false" />
+          <Property Name="MaLop" Type="int" Nullable="false" />
+          <Property Name="TietBatDau" Type="int" />
+          <Property Name="TietKetThuc" Type="int" />
+          <Property Name="NgayBatDau" Type="datetime" />
+          <Property Name="NgayKetThuc" Type="datetime" />
+        </EntityType>
         <Association Name="FK_DIEM_MONHOC1">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
           <End Role="DIEM" Type="Self.DIEM" Multiplicity="*" />
@@ -150,6 +162,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_THOIKHOABIEU_LOP">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THOIKHOABIEU_MONHOC">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MaMH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MaMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="QUANLYSINHVIENModelStoreContainer">
           <EntitySet Name="DIEM" EntityType="Self.DIEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHOA" EntityType="Self.KHOA" Schema="dbo" store:Type="Tables" />
@@ -159,6 +195,7 @@
           <EntitySet Name="QUYEN" EntityType="Self.QUYEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THOIKHOABIEU" EntityType="Self.THOIKHOABIEU" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_DIEM_MONHOC1" Association="Self.FK_DIEM_MONHOC1">
             <End Role="MONHOC" EntitySet="MONHOC" />
             <End Role="DIEM" EntitySet="DIEM" />
@@ -182,6 +219,14 @@
           <AssociationSet Name="FK_SINHVIEN_LOP1" Association="Self.FK_SINHVIEN_LOP1">
             <End Role="LOP" EntitySet="LOP" />
             <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THOIKHOABIEU_LOP" Association="Self.FK_THOIKHOABIEU_LOP">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THOIKHOABIEU_MONHOC" Association="Self.FK_THOIKHOABIEU_MONHOC">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -218,6 +263,7 @@
           <Property Name="MaKhoa" Type="Int32" />
           <NavigationProperty Name="KHOA" Relationship="Self.FK_LOP_KHOA1" FromRole="LOP" ToRole="KHOA" />
           <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SINHVIEN_LOP1" FromRole="LOP" ToRole="SINHVIEN" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK_THOIKHOABIEU_LOP" FromRole="LOP" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -226,6 +272,7 @@
           <Property Name="MaMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenMH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DIEMs" Relationship="Self.FK_DIEM_MONHOC1" FromRole="MONHOC" ToRole="DIEM" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK_THOIKHOABIEU_MONHOC" FromRole="MONHOC" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -366,7 +413,16 @@
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
             <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="THOIKHOABIEUx" EntityType="QUANLYSINHVIENModel.THOIKHOABIEU" />
+          <AssociationSet Name="FK_THOIKHOABIEU_LOP" Association="QUANLYSINHVIENModel.FK_THOIKHOABIEU_LOP">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THOIKHOABIEU_MONHOC" Association="QUANLYSINHVIENModel.FK_THOIKHOABIEU_MONHOC">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          </EntityContainer>
         <Association Name="FK_NGUOIDUNG_SINHVIEN">
           <End Type="QUANLYSINHVIENModel.SINHVIEN" Role="SINHVIEN" Multiplicity="0..1" />
           <End Type="QUANLYSINHVIENModel.NGUOIDUNG" Role="NGUOIDUNG" Multiplicity="*" />
@@ -379,7 +435,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="MaMH" />
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaMH" Type="Int32" Nullable="false" />
+          <Property Name="MaLop" Type="Int32" Nullable="false" />
+          <Property Name="TietBatDau" Type="Int32" />
+          <Property Name="TietKetThuc" Type="Int32" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="LOP" Relationship="QUANLYSINHVIENModel.FK_THOIKHOABIEU_LOP" FromRole="THOIKHOABIEU" ToRole="LOP" />
+          <NavigationProperty Name="MONHOC" Relationship="QUANLYSINHVIENModel.FK_THOIKHOABIEU_MONHOC" FromRole="THOIKHOABIEU" ToRole="MONHOC" />
+        </EntityType>
+        <Association Name="FK_THOIKHOABIEU_LOP">
+          <End Type="QUANLYSINHVIENModel.LOP" Role="LOP" Multiplicity="1" />
+          <End Type="QUANLYSINHVIENModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_THOIKHOABIEU_MONHOC">
+          <End Type="QUANLYSINHVIENModel.MONHOC" Role="MONHOC" Multiplicity="1" />
+          <End Type="QUANLYSINHVIENModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MaMH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MaMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -462,6 +556,18 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THOIKHOABIEUx">
+            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.THOIKHOABIEU">
+              <MappingFragment StoreEntitySet="THOIKHOABIEU">
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="TietKetThuc" ColumnName="TietKetThuc" />
+                <ScalarProperty Name="TietBatDau" ColumnName="TietBatDau" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="MaMH" ColumnName="MaMH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

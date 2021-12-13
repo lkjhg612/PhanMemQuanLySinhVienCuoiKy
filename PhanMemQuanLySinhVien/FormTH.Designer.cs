@@ -30,7 +30,9 @@ namespace PhanMemQuanLySinhVien
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbDoiTuongDN = new System.Windows.Forms.Label();
             this.lbTenNguoiDung = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnQLTTSV = new System.Windows.Forms.Button();
             this.btnQLMH = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@ namespace PhanMemQuanLySinhVien
             this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnQLND = new System.Windows.Forms.Button();
             this.btnQuanLyKhoa = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbDoiTuongDN = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,15 @@ namespace PhanMemQuanLySinhVien
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lbDoiTuongDN
+            // 
+            this.lbDoiTuongDN.AutoSize = true;
+            this.lbDoiTuongDN.Location = new System.Drawing.Point(82, 51);
+            this.lbDoiTuongDN.Name = "lbDoiTuongDN";
+            this.lbDoiTuongDN.Size = new System.Drawing.Size(99, 17);
+            this.lbDoiTuongDN.TabIndex = 2;
+            this.lbDoiTuongDN.Text = "@USERNAME";
+            // 
             // lbTenNguoiDung
             // 
             this.lbTenNguoiDung.AutoSize = true;
@@ -72,6 +81,15 @@ namespace PhanMemQuanLySinhVien
             this.lbTenNguoiDung.Size = new System.Drawing.Size(99, 17);
             this.lbTenNguoiDung.TabIndex = 2;
             this.lbTenNguoiDung.Text = "@USERNAME";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Đối tượng:";
             // 
             // label1
             // 
@@ -165,24 +183,6 @@ namespace PhanMemQuanLySinhVien
             this.btnQuanLyKhoa.Text = "Quản lý khoa";
             this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
             this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Đối tượng:";
-            // 
-            // lbDoiTuongDN
-            // 
-            this.lbDoiTuongDN.AutoSize = true;
-            this.lbDoiTuongDN.Location = new System.Drawing.Point(82, 51);
-            this.lbDoiTuongDN.Name = "lbDoiTuongDN";
-            this.lbDoiTuongDN.Size = new System.Drawing.Size(99, 17);
-            this.lbDoiTuongDN.TabIndex = 2;
-            this.lbDoiTuongDN.Text = "@USERNAME";
             // 
             // FormTH
             // 

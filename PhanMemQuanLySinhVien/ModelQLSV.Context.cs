@@ -33,5 +33,6 @@ namespace PhanMemQuanLySinhVien
         public virtual DbSet<QUYEN> QUYENs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

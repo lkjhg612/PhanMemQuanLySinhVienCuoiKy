@@ -18,6 +18,7 @@ namespace PhanMemQuanLySinhVien
         public MONHOC()
         {
             this.DIEMs = new HashSet<DIEM>();
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
         }
     
         public int MaMH { get; set; }
@@ -25,5 +26,7 @@ namespace PhanMemQuanLySinhVien
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }
