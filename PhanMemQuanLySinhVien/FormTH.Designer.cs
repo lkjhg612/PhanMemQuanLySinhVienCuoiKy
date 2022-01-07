@@ -30,17 +30,18 @@ namespace PhanMemQuanLySinhVien
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbDoiTuongDN = new System.Windows.Forms.Label();
             this.lbTenNguoiDung = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnQLTTSV = new System.Windows.Forms.Button();
             this.btnQLMH = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnQLDSV = new System.Windows.Forms.Button();
             this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnQLND = new System.Windows.Forms.Button();
             this.btnQuanLyKhoa = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbDoiTuongDN = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@ namespace PhanMemQuanLySinhVien
             this.panel1.Controls.Add(this.btnQLTTSV);
             this.panel1.Controls.Add(this.btnQLMH);
             this.panel1.Controls.Add(this.btnDangXuat);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnQLDSV);
             this.panel1.Controls.Add(this.btnQuanLyLop);
             this.panel1.Controls.Add(this.btnQLND);
@@ -64,6 +66,15 @@ namespace PhanMemQuanLySinhVien
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lbDoiTuongDN
+            // 
+            this.lbDoiTuongDN.AutoSize = true;
+            this.lbDoiTuongDN.Location = new System.Drawing.Point(82, 51);
+            this.lbDoiTuongDN.Name = "lbDoiTuongDN";
+            this.lbDoiTuongDN.Size = new System.Drawing.Size(99, 17);
+            this.lbDoiTuongDN.TabIndex = 2;
+            this.lbDoiTuongDN.Text = "@USERNAME";
+            // 
             // lbTenNguoiDung
             // 
             this.lbTenNguoiDung.AutoSize = true;
@@ -72,6 +83,15 @@ namespace PhanMemQuanLySinhVien
             this.lbTenNguoiDung.Size = new System.Drawing.Size(99, 17);
             this.lbTenNguoiDung.TabIndex = 2;
             this.lbTenNguoiDung.Text = "@USERNAME";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Đối tượng:";
             // 
             // label1
             // 
@@ -117,6 +137,18 @@ namespace PhanMemQuanLySinhVien
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(0, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(254, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Quản lý thời khóa biểu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnQLDSV
             // 
@@ -166,24 +198,6 @@ namespace PhanMemQuanLySinhVien
             this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
             this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Đối tượng:";
-            // 
-            // lbDoiTuongDN
-            // 
-            this.lbDoiTuongDN.AutoSize = true;
-            this.lbDoiTuongDN.Location = new System.Drawing.Point(82, 51);
-            this.lbDoiTuongDN.Name = "lbDoiTuongDN";
-            this.lbDoiTuongDN.Size = new System.Drawing.Size(99, 17);
-            this.lbDoiTuongDN.TabIndex = 2;
-            this.lbDoiTuongDN.Text = "@USERNAME";
-            // 
             // FormTH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,5 +230,6 @@ namespace PhanMemQuanLySinhVien
         public System.Windows.Forms.Button btnQLND;
         private System.Windows.Forms.Label lbDoiTuongDN;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -30,16 +30,16 @@ namespace PhanMemQuanLySinhVien
             String taiKhoan = txtTenDangNhap.Text;
             String matKhau = txtMatKhau.Text;
 
-            List<NGUOIDUNG> users = qlsv.NGUOIDUNGs.Where(h => h.TaiKhoan == taiKhoan && h.MatKhau == matKhau).ToList();
+            NGUOIDUNG users = qlsv.NGUOIDUNGs.FirstOrDefault(h => h.TaiKhoan == taiKhoan && h.MatKhau == matKhau);
 
-            if (users.Count == 0)
+            if (users == null)
             {
                 MessageBox.Show("SAI TÊN TK HOẶC MK");
             } else
             {
-                NGUOIDUNG ND = users.First(); //Lấy phần tử đầu tiên của list users và gán vào biến nd có kiểu NGUOIDUNG
+                //Lấy phần tử đầu tiên của list users và gán vào biến nd có kiểu NGUOIDUNG
 
-                FormTH formTH = new FormTH(ND);
+                FormTH formTH = new FormTH(users);
                 formTH.Show();
                 this.Hide();
             }

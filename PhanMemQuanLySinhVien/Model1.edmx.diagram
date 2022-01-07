@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd0e428065424018b6738cdc4d0703d8" Name="Diagram1">
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.Buoi" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.DIEM" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.KHOA" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.LOP" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.MONHOC" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.QUYEN" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.SINHVIEN" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.THOIKHOABIEU" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.THU" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdBuo__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdMon__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdThu__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdTKB__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_MONHOC1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_SINHVIEN1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdKho__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_LOP_KHOA1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdLop__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_SINHVIEN_LOP1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_QUYEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_SINHVIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

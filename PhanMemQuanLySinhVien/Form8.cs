@@ -91,11 +91,12 @@ namespace PhanMemQuanLySinhVien
             return xeploai;
         }
 
-        
-      
-
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormXemTKB fx = new FormXemTKB(user);
+            fx.ShowDialog();
+            this.Show();
+        }
     }
 }

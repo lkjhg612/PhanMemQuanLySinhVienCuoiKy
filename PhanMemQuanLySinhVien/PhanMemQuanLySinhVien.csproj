@@ -55,8 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buoi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETTHOIKHOABIEU.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DIEM.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -112,43 +118,61 @@
     <Compile Include="FormTH.Designer.cs">
       <DependentUpon>FormTH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTKB.Designer.cs">
+      <DependentUpon>FormTKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXemTKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemTKB.Designer.cs">
+      <DependentUpon>FormXemTKB.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHOA.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="LOP.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelQLSV.Context.cs">
+    <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSV.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelQLSV.cs">
+    <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelQLSV.Designer.cs">
+    <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSV.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="MONHOC.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NGUOIDUNG.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUYEN.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SINHVIEN.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THOIKHOABIEU.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THU.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -177,6 +201,12 @@
     <EmbeddedResource Include="FormTH.resx">
       <DependentUpon>FormTH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTKB.resx">
+      <DependentUpon>FormTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemTKB.resx">
+      <DependentUpon>FormXemTKB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,12 +216,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="ModelQLSV.edmx">
+    <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelQLSV.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelQLSV.edmx.diagram">
-      <DependentUpon>ModelQLSV.edmx</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -208,19 +238,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelQLSV.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelQLSV.Context.cs</LastGenOutput>
-      <DependentUpon>ModelQLSV.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModelQLSV.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQLSV.edmx</DependentUpon>
-      <LastGenOutput>ModelQLSV.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

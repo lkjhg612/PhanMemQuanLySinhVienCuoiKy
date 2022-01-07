@@ -12,21 +12,18 @@ namespace PhanMemQuanLySinhVien
     using System;
     using System.Collections.Generic;
     
-    public partial class KHOA
+    public partial class THU
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KHOA()
+        public THU()
         {
-            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
-            this.LOPs = new HashSet<LOP>();
+            this.CHITIETTHOIKHOABIEUx = new HashSet<CHITIETTHOIKHOABIEU>();
         }
     
-        public int MaKhoa { get; set; }
-        public string TenKhoa { get; set; }
+        public int IdThu { get; set; }
+        public string TenThu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LOP> LOPs { get; set; }
+        public virtual ICollection<CHITIETTHOIKHOABIEU> CHITIETTHOIKHOABIEUx { get; set; }
     }
 }

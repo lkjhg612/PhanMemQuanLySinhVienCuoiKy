@@ -236,5 +236,13 @@ namespace PhanMemQuanLySinhVien
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormTKB tkb = new FormTKB();
+            tkb.ShowDialog();
+            this.Show();
+        }
     }
 }

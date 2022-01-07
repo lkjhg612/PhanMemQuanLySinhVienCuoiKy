@@ -25,6 +25,8 @@ namespace PhanMemQuanLySinhVien
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Buoi> Buois { get; set; }
+        public virtual DbSet<CHITIETTHOIKHOABIEU> CHITIETTHOIKHOABIEUx { get; set; }
         public virtual DbSet<DIEM> DIEMs { get; set; }
         public virtual DbSet<KHOA> KHOAs { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
@@ -33,5 +35,7 @@ namespace PhanMemQuanLySinhVien
         public virtual DbSet<QUYEN> QUYENs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        public virtual DbSet<THU> THUs { get; set; }
     }
 }

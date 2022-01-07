@@ -17,12 +17,15 @@ namespace PhanMemQuanLySinhVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MONHOC()
         {
+            this.CHITIETTHOIKHOABIEUx = new HashSet<CHITIETTHOIKHOABIEU>();
             this.DIEMs = new HashSet<DIEM>();
         }
     
         public int MaMH { get; set; }
         public string TenMH { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETTHOIKHOABIEU> CHITIETTHOIKHOABIEUx { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
     }

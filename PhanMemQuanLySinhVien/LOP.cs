@@ -17,6 +17,7 @@ namespace PhanMemQuanLySinhVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOP()
         {
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
             this.SINHVIENs = new HashSet<SINHVIEN>();
         }
     
@@ -25,6 +26,8 @@ namespace PhanMemQuanLySinhVien
         public Nullable<int> MaKhoa { get; set; }
     
         public virtual KHOA KHOA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SINHVIEN> SINHVIENs { get; set; }
     }
