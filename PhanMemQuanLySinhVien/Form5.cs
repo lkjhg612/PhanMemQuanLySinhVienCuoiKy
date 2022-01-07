@@ -211,5 +211,10 @@ namespace PhanMemQuanLySinhVien
         {
 
         }
+
+        private void dataGridViewDiemSV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

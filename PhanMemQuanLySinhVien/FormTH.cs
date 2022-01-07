@@ -23,6 +23,7 @@ namespace PhanMemQuanLySinhVien
         Form6 form6;
         Form7 form7;
         Form8 form8;
+        FormThongKe thongKe;
 
         public FormTH(NGUOIDUNG nd)
         {
@@ -51,6 +52,7 @@ namespace PhanMemQuanLySinhVien
                 case "btnQLDSV": btnQLDSV_Clicked(); break;
                 case "btnDangXuat": btnDangXuat_Clicked() ; break;
                 case "btnQLND": btnQLND_Clicked(); break;
+                case "btnThongKe": btnThongKe_Clicked(); break;
             }
 
 
@@ -184,6 +186,24 @@ namespace PhanMemQuanLySinhVien
             }
         }
 
+        private void btnThongKe_Clicked()
+        {
+            if (thongKe == null)
+            {
+                thongKe = new FormThongKe();
+                thongKe.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                thongKe.StartPosition = FormStartPosition.Manual;
+                thongKe.MdiParent = this;
+                thongKe.Show();
+            }
+            else
+            {
+                //QuanLyCaffe quanLyCaffe = new QuanLyCaffe();
+                //form3.dataGridView2.DataSource = quanLyCaffe.hienThiMatHang();
+                thongKe.Activate();
+            }
+        }
+
         private void FormTH_Load(object sender, EventArgs e)
         {
             lbTenNguoiDung.Text = nd.TenNguoiDung;
@@ -201,6 +221,7 @@ namespace PhanMemQuanLySinhVien
                 btnQLDSV.Visible = false;
                 btnQLMH.Visible = false;
                 btnQLTTSV.Visible = false;
+                btnThongKe.Visible = false;
 
 
                 if (form8 == null)
@@ -235,6 +256,52 @@ namespace PhanMemQuanLySinhVien
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        int x = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            x = label3.Location.X;
+            x--;
+            label3.Location = new Point(x, label3.Location.Y);
+            Color colortruocdo = label3.ForeColor;
+            Color[] clr = new Color[] { Color.Red, Color.Pink, Color.White, Color.Green, Color.Yellow };
+            for (Int32 i = 0; i < clr.Length; i++)
+            {
+                if (label3.ForeColor == clr[i])
+                {
+                    label3.ForeColor = (i == clr.Length - 1 ? clr[0] : clr[i + 1]);
+                    /*   if( i == clr.Length - 1) {
+                           label3.Forecolor = clr[0];
+                          else{
+                            label3.Forecolor = clr[i+1];
+                    }
+                    }
+                       */
+                    break;
+
+                }
+                if (label3.ForeColor == colortruocdo)
+                {
+                    label3.ForeColor = clr[0];
+                }
+            }
+            if (x == 0)
+            {
+                x = this.Size.Width;
+                label3.Visible = false;
+                
+            }
+           
+        }
+        int y = 0;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            y++;
+            if(y== 25)
+            {
+                pictureBox1.Hide();
+                timer2.Stop();
+            }
         }
     }
 }

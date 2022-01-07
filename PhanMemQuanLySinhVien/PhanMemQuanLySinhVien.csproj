@@ -112,6 +112,12 @@
     <Compile Include="FormTH.Designer.cs">
       <DependentUpon>FormTH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHOA.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
@@ -147,9 +153,6 @@
     <Compile Include="SINHVIEN.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelQLSV.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +180,9 @@
     <EmbeddedResource Include="FormTH.resx">
       <DependentUpon>FormTH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ModelQLSV.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -218,6 +225,8 @@
       <DependentUpon>ModelQLSV.edmx</DependentUpon>
       <LastGenOutput>ModelQLSV.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\R %281%29.gif" />
+    <None Include="Resources\timkiem.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

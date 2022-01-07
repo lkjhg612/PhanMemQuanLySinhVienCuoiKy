@@ -16,6 +16,15 @@
           <Property Name="DiemGiuaKy" Type="float" />
           <Property Name="DiemCuoiKy" Type="float" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'QUANLYSINHVIEN.dbo.DSGioi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="DSGioi">
+          <Property Name="MaSV" Type="int" />
+          <Property Name="MaMH" Type="int" />
+          <Property Name="Loai" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="KHOA">
           <Key>
             <PropertyRef Name="MaKhoa" />
@@ -67,16 +76,6 @@
           <Property Name="NTNS" Type="datetime" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="MaLop" Type="int" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_DIEM_MONHOC1">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
@@ -158,7 +157,6 @@
           <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QUYEN" EntityType="Self.QUYEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_DIEM_MONHOC1" Association="Self.FK_DIEM_MONHOC1">
             <End Role="MONHOC" EntitySet="MONHOC" />
             <End Role="DIEM" EntitySet="DIEM" />
@@ -263,16 +261,6 @@
           <NavigationProperty Name="LOP" Relationship="Self.FK_SINHVIEN_LOP1" FromRole="SINHVIEN" ToRole="LOP" />
           <NavigationProperty Name="NGUOIDUNGs" Relationship="QUANLYSINHVIENModel.FK_NGUOIDUNG_SINHVIEN" FromRole="SINHVIEN" ToRole="NGUOIDUNG" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <Association Name="FK_DIEM_MONHOC1">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
           <End Role="DIEM" Type="Self.DIEM" Multiplicity="*" />
@@ -341,7 +329,6 @@
           <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
           <EntitySet Name="QUYENs" EntityType="Self.QUYEN" />
           <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_DIEM_MONHOC1" Association="Self.FK_DIEM_MONHOC1">
             <End Role="MONHOC" EntitySet="MONHOCs" />
             <End Role="DIEM" EntitySet="DIEMs" />
@@ -451,17 +438,6 @@
                 <ScalarProperty Name="NTNS" ColumnName="NTNS" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="MaLop" ColumnName="MaLop" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

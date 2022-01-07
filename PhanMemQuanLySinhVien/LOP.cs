@@ -24,6 +24,9 @@ namespace PhanMemQuanLySinhVien
         public string TenLop { get; set; }
         public Nullable<int> MaKhoa { get; set; }
     
+
+
+
         public virtual KHOA KHOA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SINHVIEN> SINHVIENs { get; set; }

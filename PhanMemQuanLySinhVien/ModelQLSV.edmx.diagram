@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.NGUOIDUNG" Width="1.5" PointX="5.375" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.QUYEN" Width="1.5" PointX="3.125" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYSINHVIENModel.SINHVIEN" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYSINHVIENModel.sysdiagram" Width="1.5" PointX="9.625" PointY="3.625" IsExpanded="true" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_MONHOC1" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_DIEM_SINHVIEN1" ManuallyRouted="false" ></AssociationConnector>
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_LOP_KHOA1" ManuallyRouted="false" />
