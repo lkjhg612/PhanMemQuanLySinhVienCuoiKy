@@ -284,6 +284,7 @@ namespace PhanMemQuanLySinhVien
             this.Controls.Add(this.label1);
             this.Name = "FormTKB";
             this.Text = "FormTKB";
+            this.Load += new System.EventHandler(this.FormTKB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvtkb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

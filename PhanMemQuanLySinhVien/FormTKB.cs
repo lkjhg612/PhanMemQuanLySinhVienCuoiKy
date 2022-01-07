@@ -12,9 +12,15 @@ namespace PhanMemQuanLySinhVien
 {
     public partial class FormTKB : Form
     {
+        QUANLYSINHVIEN db = new QUANLYSINHVIEN();
         public FormTKB()
         {
             InitializeComponent();
+        }
+
+        private void FormTKB_Load(object sender, EventArgs e)
+        {
+            db.SaveChanges();
         }
     }
 }
