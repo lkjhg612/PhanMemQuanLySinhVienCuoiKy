@@ -5,6 +5,24 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="QUANLYSINHVIENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buoi">
+          <Key>
+            <PropertyRef Name="IdBuoi" />
+          </Key>
+          <Property Name="IdBuoi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenBuoi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CHITIETTHOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="IdCTTKB" />
+          </Key>
+          <Property Name="IdCTTKB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdTKB" Type="int" />
+          <Property Name="IdMonHoc" Type="int" />
+          <Property Name="HoVaTenGV" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdBuoi" Type="int" />
+          <Property Name="IdThu" Type="int" />
+        </EntityType>
         <EntityType Name="DIEM">
           <Key>
             <PropertyRef Name="MaSV" />
@@ -16,15 +34,6 @@
           <Property Name="DiemGiuaKy" Type="float" />
           <Property Name="DiemCuoiKy" Type="float" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'QUANLYSINHVIEN.dbo.DSGioi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DSGioi">
-          <Property Name="MaSV" Type="int" />
-          <Property Name="MaMH" Type="int" />
-          <Property Name="Loai" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="KHOA">
           <Key>
             <PropertyRef Name="MaKhoa" />
@@ -77,6 +86,95 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="MaLop" Type="int" />
         </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="IdTKB" />
+          </Key>
+          <Property Name="IdTKB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdLop" Type="int" />
+          <Property Name="IdKhoa" Type="int" />
+          <Property Name="NgayBatDau" Type="datetime" />
+          <Property Name="NgayKetThuc" Type="datetime" />
+        </EntityType>
+        <EntityType Name="THU">
+          <Key>
+            <PropertyRef Name="IdThu" />
+          </Key>
+          <Property Name="IdThu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenThu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CHITIETTH__IdBuo__37A5467C">
+          <End Role="Buoi" Type="Self.Buoi" Multiplicity="0..1" />
+          <End Role="CHITIETTHOIKHOABIEU" Type="Self.CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buoi">
+              <PropertyRef Name="IdBuoi" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdBuoi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdMon__38996AB5">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="0..1" />
+          <End Role="CHITIETTHOIKHOABIEU" Type="Self.CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MaMH" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdThu__398D8EEE">
+          <End Role="THU" Type="Self.THU" Multiplicity="0..1" />
+          <End Role="CHITIETTHOIKHOABIEU" Type="Self.CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THU">
+              <PropertyRef Name="IdThu" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdThu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdTKB__3A81B327">
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="0..1" />
+          <End Role="CHITIETTHOIKHOABIEU" Type="Self.CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THOIKHOABIEU">
+              <PropertyRef Name="IdTKB" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdTKB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IdKho__412EB0B6">
+          <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IdKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IdLop__4222D4EF">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="0..1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IdLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DIEM_MONHOC1">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
           <End Role="DIEM" Type="Self.DIEM" Multiplicity="*" />
@@ -150,6 +248,8 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QUANLYSINHVIENModelStoreContainer">
+          <EntitySet Name="Buoi" EntityType="Self.Buoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHITIETTHOIKHOABIEU" EntityType="Self.CHITIETTHOIKHOABIEU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DIEM" EntityType="Self.DIEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHOA" EntityType="Self.KHOA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
@@ -157,6 +257,32 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QUYEN" EntityType="Self.QUYEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THOIKHOABIEU" EntityType="Self.THOIKHOABIEU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THU" EntityType="Self.THU" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CHITIETTH__IdBuo__37A5467C" Association="Self.FK__CHITIETTH__IdBuo__37A5467C">
+            <End Role="Buoi" EntitySet="Buoi" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdMon__38996AB5" Association="Self.FK__CHITIETTH__IdMon__38996AB5">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdThu__398D8EEE" Association="Self.FK__CHITIETTH__IdThu__398D8EEE">
+            <End Role="THU" EntitySet="THU" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdTKB__3A81B327" Association="Self.FK__CHITIETTH__IdTKB__3A81B327">
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IdKho__412EB0B6" Association="Self.FK__THOIKHOAB__IdKho__412EB0B6">
+            <End Role="KHOA" EntitySet="KHOA" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IdLop__4222D4EF" Association="Self.FK__THOIKHOAB__IdLop__4222D4EF">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
           <AssociationSet Name="FK_DIEM_MONHOC1" Association="Self.FK_DIEM_MONHOC1">
             <End Role="MONHOC" EntitySet="MONHOC" />
             <End Role="DIEM" EntitySet="DIEM" />
@@ -206,6 +332,7 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           <Property Name="MaKhoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="LOPs" Relationship="Self.FK_LOP_KHOA1" FromRole="KHOA" ToRole="LOP" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__THOIKHOAB__IdKho__412EB0B6" FromRole="KHOA" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="LOP">
           <Key>
@@ -216,6 +343,7 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           <Property Name="MaKhoa" Type="Int32" />
           <NavigationProperty Name="KHOA" Relationship="Self.FK_LOP_KHOA1" FromRole="LOP" ToRole="KHOA" />
           <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SINHVIEN_LOP1" FromRole="LOP" ToRole="SINHVIEN" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__THOIKHOAB__IdLop__4222D4EF" FromRole="LOP" ToRole="THOIKHOABIEU" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
@@ -224,6 +352,7 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
           <Property Name="MaMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenMH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DIEMs" Relationship="Self.FK_DIEM_MONHOC1" FromRole="MONHOC" ToRole="DIEM" />
+          <NavigationProperty Name="CHITIETTHOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdMon__38996AB5" FromRole="MONHOC" ToRole="CHITIETTHOIKHOABIEU" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -353,6 +482,34 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
             <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
           </AssociationSet>
+          <EntitySet Name="Buois" EntityType="QUANLYSINHVIENModel.Buoi" />
+          <EntitySet Name="CHITIETTHOIKHOABIEUx" EntityType="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" />
+          <EntitySet Name="THOIKHOABIEUx" EntityType="QUANLYSINHVIENModel.THOIKHOABIEU" />
+          <EntitySet Name="THUs" EntityType="QUANLYSINHVIENModel.THU" />
+          <AssociationSet Name="FK__CHITIETTH__IdBuo__37A5467C" Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdBuo__37A5467C">
+            <End Role="Buoi" EntitySet="Buois" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdMon__38996AB5" Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdMon__38996AB5">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdThu__398D8EEE" Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdThu__398D8EEE">
+            <End Role="THU" EntitySet="THUs" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CHITIETTH__IdTKB__3A81B327" Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdTKB__3A81B327">
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+            <End Role="CHITIETTHOIKHOABIEU" EntitySet="CHITIETTHOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IdKho__412EB0B6" Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdKho__412EB0B6">
+            <End Role="KHOA" EntitySet="KHOAs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IdLop__4222D4EF" Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdLop__4222D4EF">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="FK_NGUOIDUNG_SINHVIEN">
           <End Type="QUANLYSINHVIENModel.SINHVIEN" Role="SINHVIEN" Multiplicity="0..1" />
@@ -363,6 +520,122 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
             </Principal>
             <Dependent Role="NGUOIDUNG">
               <PropertyRef Name="MaSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Buoi">
+          <Key>
+            <PropertyRef Name="IdBuoi" />
+          </Key>
+          <Property Name="IdBuoi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenBuoi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHITIETTHOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdBuo__37A5467C" FromRole="Buoi" ToRole="CHITIETTHOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="CHITIETTHOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="IdCTTKB" />
+          </Key>
+          <Property Name="IdCTTKB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTKB" Type="Int32" />
+          <Property Name="IdMonHoc" Type="Int32" />
+          <Property Name="HoVaTenGV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdBuoi" Type="Int32" />
+          <Property Name="IdThu" Type="Int32" />
+          <NavigationProperty Name="Buoi" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdBuo__37A5467C" FromRole="CHITIETTHOIKHOABIEU" ToRole="Buoi" />
+          <NavigationProperty Name="MONHOC" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdMon__38996AB5" FromRole="CHITIETTHOIKHOABIEU" ToRole="MONHOC" />
+          <NavigationProperty Name="THU" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdThu__398D8EEE" FromRole="CHITIETTHOIKHOABIEU" ToRole="THU" />
+          <NavigationProperty Name="THOIKHOABIEU" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdTKB__3A81B327" FromRole="CHITIETTHOIKHOABIEU" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="IdTKB" />
+          </Key>
+          <Property Name="IdTKB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdLop" Type="Int32" />
+          <Property Name="IdKhoa" Type="Int32" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CHITIETTHOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdTKB__3A81B327" FromRole="THOIKHOABIEU" ToRole="CHITIETTHOIKHOABIEU" />
+          <NavigationProperty Name="KHOA" Relationship="QUANLYSINHVIENModel.FK__THOIKHOAB__IdKho__412EB0B6" FromRole="THOIKHOABIEU" ToRole="KHOA" />
+          <NavigationProperty Name="LOP" Relationship="QUANLYSINHVIENModel.FK__THOIKHOAB__IdLop__4222D4EF" FromRole="THOIKHOABIEU" ToRole="LOP" />
+        </EntityType>
+        <EntityType Name="THU">
+          <Key>
+            <PropertyRef Name="IdThu" />
+          </Key>
+          <Property Name="IdThu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenThu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHITIETTHOIKHOABIEUx" Relationship="QUANLYSINHVIENModel.FK__CHITIETTH__IdThu__398D8EEE" FromRole="THU" ToRole="CHITIETTHOIKHOABIEU" />
+        </EntityType>
+        <Association Name="FK__CHITIETTH__IdBuo__37A5467C">
+          <End Type="QUANLYSINHVIENModel.Buoi" Role="Buoi" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Role="CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buoi">
+              <PropertyRef Name="IdBuoi" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdBuoi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdMon__38996AB5">
+          <End Type="QUANLYSINHVIENModel.MONHOC" Role="MONHOC" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Role="CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="MaMH" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdThu__398D8EEE">
+          <End Type="QUANLYSINHVIENModel.THU" Role="THU" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Role="CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THU">
+              <PropertyRef Name="IdThu" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdThu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CHITIETTH__IdTKB__3A81B327">
+          <End Type="QUANLYSINHVIENModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Role="CHITIETTHOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THOIKHOABIEU">
+              <PropertyRef Name="IdTKB" />
+            </Principal>
+            <Dependent Role="CHITIETTHOIKHOABIEU">
+              <PropertyRef Name="IdTKB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IdKho__412EB0B6">
+          <End Type="QUANLYSINHVIENModel.KHOA" Role="KHOA" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IdKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IdLop__4222D4EF">
+          <End Type="QUANLYSINHVIENModel.LOP" Role="LOP" Multiplicity="0..1" />
+          <End Type="QUANLYSINHVIENModel.THOIKHOABIEU" Role="THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IdLop" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -438,6 +711,45 @@ warning 6002: The table/view 'QUANLYSINHVIEN.dbo.DSHocLai' does not have a prima
                 <ScalarProperty Name="NTNS" ColumnName="NTNS" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buois">
+            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.Buoi">
+              <MappingFragment StoreEntitySet="Buoi">
+                <ScalarProperty Name="TenBuoi" ColumnName="TenBuoi" />
+                <ScalarProperty Name="IdBuoi" ColumnName="IdBuoi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETTHOIKHOABIEUx">
+            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU">
+              <MappingFragment StoreEntitySet="CHITIETTHOIKHOABIEU">
+                <ScalarProperty Name="IdThu" ColumnName="IdThu" />
+                <ScalarProperty Name="IdBuoi" ColumnName="IdBuoi" />
+                <ScalarProperty Name="HoVaTenGV" ColumnName="HoVaTenGV" />
+                <ScalarProperty Name="IdMonHoc" ColumnName="IdMonHoc" />
+                <ScalarProperty Name="IdTKB" ColumnName="IdTKB" />
+                <ScalarProperty Name="IdCTTKB" ColumnName="IdCTTKB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THOIKHOABIEUx">
+            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.THOIKHOABIEU">
+              <MappingFragment StoreEntitySet="THOIKHOABIEU">
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="IdKhoa" ColumnName="IdKhoa" />
+                <ScalarProperty Name="IdLop" ColumnName="IdLop" />
+                <ScalarProperty Name="IdTKB" ColumnName="IdTKB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THUs">
+            <EntityTypeMapping TypeName="QUANLYSINHVIENModel.THU">
+              <MappingFragment StoreEntitySet="THU">
+                <ScalarProperty Name="TenThu" ColumnName="TenThu" />
+                <ScalarProperty Name="IdThu" ColumnName="IdThu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

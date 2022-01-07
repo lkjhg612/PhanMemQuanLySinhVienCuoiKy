@@ -45,6 +45,7 @@ namespace PhanMemQuanLySinhVien
             this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnQLND = new System.Windows.Forms.Button();
             this.btnQuanLyKhoa = new System.Windows.Forms.Button();
+            this.btnQLTKB = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@ namespace PhanMemQuanLySinhVien
             this.panel1.Controls.Add(this.btnQLTTSV);
             this.panel1.Controls.Add(this.btnQLMH);
             this.panel1.Controls.Add(this.btnDangXuat);
+            this.panel1.Controls.Add(this.btnQLTKB);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.btnQLDSV);
             this.panel1.Controls.Add(this.btnQuanLyLop);
@@ -259,6 +261,21 @@ namespace PhanMemQuanLySinhVien
             this.btnQuanLyKhoa.UseVisualStyleBackColor = false;
             this.btnQuanLyKhoa.Click += new System.EventHandler(this.AllBtn_Click);
             // 
+            // btnQLTKB
+            // 
+            this.btnQLTKB.BackColor = System.Drawing.Color.MistyRose;
+            this.btnQLTKB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLTKB.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTKB.Image")));
+            this.btnQLTKB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLTKB.Location = new System.Drawing.Point(0, 308);
+            this.btnQLTKB.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQLTKB.Name = "btnQLTKB";
+            this.btnQLTKB.Size = new System.Drawing.Size(190, 37);
+            this.btnQLTKB.TabIndex = 1;
+            this.btnQLTKB.Text = "Quản lý thời khóa biểu";
+            this.btnQLTKB.UseVisualStyleBackColor = false;
+            this.btnQLTKB.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
             // FormTH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +315,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnQLTKB;
     }
 }

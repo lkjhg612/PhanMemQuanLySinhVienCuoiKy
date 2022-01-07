@@ -18,6 +18,7 @@ namespace PhanMemQuanLySinhVien
         public KHOA()
         {
             this.LOPs = new HashSet<LOP>();
+            this.THOIKHOABIEUx = new HashSet<THOIKHOABIEU>();
         }
     
         public int MaKhoa { get; set; }
@@ -25,5 +26,7 @@ namespace PhanMemQuanLySinhVien
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP> LOPs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
     }
 }

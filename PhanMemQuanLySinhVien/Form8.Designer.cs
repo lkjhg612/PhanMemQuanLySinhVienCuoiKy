@@ -53,6 +53,7 @@ namespace PhanMemQuanLySinhVien
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiemSinhVien)).BeginInit();
@@ -337,6 +338,18 @@ namespace PhanMemQuanLySinhVien
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(552, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 37);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Xem lịch học";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +358,7 @@ namespace PhanMemQuanLySinhVien
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.ClientSize = new System.Drawing.Size(714, 449);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -391,5 +405,6 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtLop;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

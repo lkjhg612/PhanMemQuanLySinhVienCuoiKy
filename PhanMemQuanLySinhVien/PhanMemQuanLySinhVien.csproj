@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buoi.cs">
+      <DependentUpon>ModelQLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETTHOIKHOABIEU.cs">
+      <DependentUpon>ModelQLSV.tt</DependentUpon>
+    </Compile>
     <Compile Include="DIEM.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
@@ -157,6 +163,12 @@
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
     <Compile Include="SINHVIEN.cs">
+      <DependentUpon>ModelQLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THOIKHOABIEU.cs">
+      <DependentUpon>ModelQLSV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THU.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">

@@ -32,5 +32,9 @@ namespace PhanMemQuanLySinhVien
         public virtual DbSet<NGUOIDUNG> NGUOIDUNGs { get; set; }
         public virtual DbSet<QUYEN> QUYENs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
+        public virtual DbSet<Buoi> Buois { get; set; }
+        public virtual DbSet<CHITIETTHOIKHOABIEU> CHITIETTHOIKHOABIEUx { get; set; }
+        public virtual DbSet<THOIKHOABIEU> THOIKHOABIEUx { get; set; }
+        public virtual DbSet<THU> THUs { get; set; }
     }
 }

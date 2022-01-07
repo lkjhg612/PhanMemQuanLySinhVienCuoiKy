@@ -24,6 +24,7 @@ namespace PhanMemQuanLySinhVien
         Form7 form7;
         Form8 form8;
         FormThongKe thongKe;
+        FormTKB formTKB;
 
         public FormTH(NGUOIDUNG nd)
         {
@@ -60,9 +61,29 @@ namespace PhanMemQuanLySinhVien
                 case "btnDangXuat": btnDangXuat_Clicked() ; break;
                 case "btnQLND": btnQLND_Clicked(); break;
                 case "btnThongKe": btnThongKe_Clicked(); break;
+                case "btnQLTKB": btnQuanLyTKB_Clicked(); break;
             }
 
 
+        }
+
+        private void btnQuanLyTKB_Clicked()
+        {
+            /*MessageBox.Show("S");*/
+
+            if (formTKB == null)
+            {
+                formTKB = new FormTKB();
+                formTKB.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                formTKB.StartPosition = FormStartPosition.Manual;
+                formTKB.MdiParent = this;
+                formTKB.Show();
+            }
+            else
+            {
+                formTKB.loaddata();
+                formTKB.Activate();
+            }
         }
 
         private void btnQuanLyKhoa_Clicked()

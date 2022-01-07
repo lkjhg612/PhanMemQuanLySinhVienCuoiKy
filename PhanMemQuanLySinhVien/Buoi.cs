@@ -12,20 +12,17 @@ namespace PhanMemQuanLySinhVien
     using System;
     using System.Collections.Generic;
     
-    public partial class MONHOC
+    public partial class Buoi
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MONHOC()
+        public Buoi()
         {
-            this.DIEMs = new HashSet<DIEM>();
             this.CHITIETTHOIKHOABIEUx = new HashSet<CHITIETTHOIKHOABIEU>();
         }
     
-        public int MaMH { get; set; }
-        public string TenMH { get; set; }
+        public int IdBuoi { get; set; }
+        public string TenBuoi { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DIEM> DIEMs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETTHOIKHOABIEU> CHITIETTHOIKHOABIEUx { get; set; }
     }

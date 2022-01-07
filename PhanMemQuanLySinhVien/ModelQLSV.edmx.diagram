@@ -18,6 +18,16 @@
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_SINHVIEN_LOP1" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_QUYEN" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYSINHVIENModel.FK_NGUOIDUNG_SINHVIEN" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.Buoi" Width="1.5" PointX="8.5" PointY="13.125" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.CHITIETTHOIKHOABIEU" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.THOIKHOABIEU" Width="1.5" PointX="4.875" PointY="0.75" />
+        <EntityTypeShape EntityType="QUANLYSINHVIENModel.THU" Width="1.5" PointX="8.5" PointY="10.75" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdBuo__37A5467C" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdMon__38996AB5" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdThu__398D8EEE" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__CHITIETTH__IdTKB__3A81B327" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdKho__412EB0B6" />
+        <AssociationConnector Association="QUANLYSINHVIENModel.FK__THOIKHOAB__IdLop__4222D4EF" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
