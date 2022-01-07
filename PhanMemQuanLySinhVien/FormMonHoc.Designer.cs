@@ -1,7 +1,7 @@
 ﻿
 namespace PhanMemQuanLySinhVien
 {
-    partial class Form3
+    partial class FormMonHoc
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PhanMemQuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMonHoc));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();

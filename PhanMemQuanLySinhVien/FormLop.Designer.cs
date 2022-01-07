@@ -1,7 +1,7 @@
 ﻿
 namespace PhanMemQuanLySinhVien
 {
-    partial class Form2
+    partial class FormLop
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PhanMemQuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLop));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaLop = new System.Windows.Forms.TextBox();

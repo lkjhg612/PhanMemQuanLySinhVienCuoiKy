@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PhanMemQuanLySinhVien
 {
-    public partial class Form2 : Form
+    public partial class FormLop : Form
     {
 
         QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
-        public Form2()
+        public FormLop()
         {
             InitializeComponent();
         }

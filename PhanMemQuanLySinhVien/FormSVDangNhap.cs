@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace PhanMemQuanLySinhVien
 {
-    public partial class Form8 : Form
+    public partial class FormSVDangNhap : Form
     {
         QUANLYSINHVIEN qlsv = new QUANLYSINHVIEN();
         NGUOIDUNG user;
        
-        public Form8(NGUOIDUNG nd)
+        public FormSVDangNhap(NGUOIDUNG nd)
         {
             InitializeComponent();
             user = nd;
@@ -91,11 +91,12 @@ namespace PhanMemQuanLySinhVien
             return xeploai;
         }
 
-        
-      
-
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormXemTKB fx = new FormXemTKB(user);
+            fx.ShowDialog();
+            this.Show();
+        }
     }
 }

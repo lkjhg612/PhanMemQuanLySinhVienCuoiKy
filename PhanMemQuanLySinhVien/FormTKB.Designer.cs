@@ -80,7 +80,7 @@ namespace PhanMemQuanLySinhVien
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(288, 22);
+            this.label4.Location = new System.Drawing.Point(7, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(358, 37);
@@ -146,19 +146,19 @@ namespace PhanMemQuanLySinhVien
             // 
             this.gvtkb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvtkb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvtkb.Location = new System.Drawing.Point(262, 70);
+            this.gvtkb.Location = new System.Drawing.Point(254, 70);
             this.gvtkb.Margin = new System.Windows.Forms.Padding(2);
             this.gvtkb.Name = "gvtkb";
             this.gvtkb.RowHeadersWidth = 51;
             this.gvtkb.RowTemplate.Height = 24;
-            this.gvtkb.Size = new System.Drawing.Size(527, 361);
+            this.gvtkb.Size = new System.Drawing.Size(455, 361);
             this.gvtkb.TabIndex = 27;
             this.gvtkb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvtkb_CellClick);
             // 
             // btn_XoaTKB
             // 
             this.btn_XoaTKB.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaTKB.Image")));
-            this.btn_XoaTKB.Location = new System.Drawing.Point(190, 343);
+            this.btn_XoaTKB.Location = new System.Drawing.Point(179, 373);
             this.btn_XoaTKB.Margin = new System.Windows.Forms.Padding(2);
             this.btn_XoaTKB.Name = "btn_XoaTKB";
             this.btn_XoaTKB.Size = new System.Drawing.Size(53, 57);
@@ -191,7 +191,7 @@ namespace PhanMemQuanLySinhVien
             // btn_SuaTKB
             // 
             this.btn_SuaTKB.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaTKB.Image")));
-            this.btn_SuaTKB.Location = new System.Drawing.Point(111, 343);
+            this.btn_SuaTKB.Location = new System.Drawing.Point(99, 373);
             this.btn_SuaTKB.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SuaTKB.Name = "btn_SuaTKB";
             this.btn_SuaTKB.Size = new System.Drawing.Size(60, 57);
@@ -254,7 +254,7 @@ namespace PhanMemQuanLySinhVien
             // btn_ThemTKB
             // 
             this.btn_ThemTKB.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemTKB.Image")));
-            this.btn_ThemTKB.Location = new System.Drawing.Point(14, 341);
+            this.btn_ThemTKB.Location = new System.Drawing.Point(7, 372);
             this.btn_ThemTKB.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThemTKB.Name = "btn_ThemTKB";
             this.btn_ThemTKB.Size = new System.Drawing.Size(69, 59);
@@ -292,9 +292,9 @@ namespace PhanMemQuanLySinhVien
             this.groupBox1.Controls.Add(this.cbxMH);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cbxLop);
-            this.groupBox1.Location = new System.Drawing.Point(9, 42);
+            this.groupBox1.Location = new System.Drawing.Point(9, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 288);
+            this.groupBox1.Size = new System.Drawing.Size(237, 288);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thời khóa biểu";
@@ -302,7 +302,7 @@ namespace PhanMemQuanLySinhVien
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(651, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(380, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -314,7 +314,7 @@ namespace PhanMemQuanLySinhVien
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(712, 449);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -346,18 +346,18 @@ namespace PhanMemQuanLySinhVien
         private System.Windows.Forms.ComboBox cbxMH;
         private System.Windows.Forms.ComboBox cbxLop;
         private System.Windows.Forms.DataGridView gvtkb;
-        private System.Windows.Forms.Button btn_XoaTKB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_SuaTKB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_ThemTKB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btn_XoaTKB;
+        public System.Windows.Forms.Button btn_SuaTKB;
+        public System.Windows.Forms.Button btn_ThemTKB;
     }
 }

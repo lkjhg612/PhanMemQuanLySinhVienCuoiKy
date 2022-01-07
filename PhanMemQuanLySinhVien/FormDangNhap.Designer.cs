@@ -1,7 +1,7 @@
 ﻿
 namespace PhanMemQuanLySinhVien
 {
-    partial class Form6
+    partial class FormDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PhanMemQuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();

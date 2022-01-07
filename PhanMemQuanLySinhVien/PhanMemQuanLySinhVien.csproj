@@ -64,53 +64,53 @@
     <Compile Include="DIEM.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormKhoa.Designer.cs">
+      <DependentUpon>FormKhoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormLop.Designer.cs">
+      <DependentUpon>FormLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FormMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FormMonHoc.Designer.cs">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="FormTTSV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FormTTSV.Designer.cs">
+      <DependentUpon>FormTTSV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="FormDiemSV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="FormDiemSV.Designer.cs">
+      <DependentUpon>FormDiemSV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="FormTTND.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="FormTTND.Designer.cs">
+      <DependentUpon>FormTTND.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="FormSVDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="FormSVDangNhap.Designer.cs">
+      <DependentUpon>FormSVDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTH.cs">
       <SubType>Form</SubType>
@@ -129,6 +129,12 @@
     </Compile>
     <Compile Include="FormTKB.Designer.cs">
       <DependentUpon>FormTKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXemTKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemTKB.Designer.cs">
+      <DependentUpon>FormXemTKB.cs</DependentUpon>
     </Compile>
     <Compile Include="KHOA.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
@@ -171,29 +177,29 @@
     <Compile Include="THU.cs">
       <DependentUpon>ModelQLSV.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormKhoa.resx">
+      <DependentUpon>FormKhoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormLop.resx">
+      <DependentUpon>FormLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FormMonHoc.resx">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FormTTSV.resx">
+      <DependentUpon>FormTTSV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FormDiemSV.resx">
+      <DependentUpon>FormDiemSV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="FormTTND.resx">
+      <DependentUpon>FormTTND.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="FormSVDangNhap.resx">
+      <DependentUpon>FormSVDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTH.resx">
       <DependentUpon>FormTH.cs</DependentUpon>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTKB.resx">
       <DependentUpon>FormTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemTKB.resx">
+      <DependentUpon>FormXemTKB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,7 +1,7 @@
 ﻿
 namespace PhanMemQuanLySinhVien
 {
-    partial class Form8
+    partial class FormSVDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PhanMemQuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSVDangNhap));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnNu = new System.Windows.Forms.RadioButton();
             this.rbtnNam = new System.Windows.Forms.RadioButton();
@@ -349,6 +349,7 @@ namespace PhanMemQuanLySinhVien
             this.button1.TabIndex = 24;
             this.button1.Text = "Xem lịch học";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form8
             // 

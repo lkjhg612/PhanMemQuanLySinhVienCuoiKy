@@ -15,14 +15,14 @@ namespace PhanMemQuanLySinhVien
         NGUOIDUNG nd;
         int? id_Quyen;
 
-        Form1 form1;
-        Form2 form2;
-        Form3 form3;
-        Form4 form4;
-        Form5 form5;
-        Form6 form6;
-        Form7 form7;
-        Form8 form8;
+        FormKhoa form1;
+        FormLop form2;
+        FormMonHoc form3;
+        FormTTSV form4;
+        FormDiemSV form5;
+        FormDangNhap form6;
+        FormTTND form7;
+        FormSVDangNhap form8;
         FormThongKe thongKe;
         FormTKB formTKB;
 
@@ -78,11 +78,27 @@ namespace PhanMemQuanLySinhVien
                 formTKB.StartPosition = FormStartPosition.Manual;
                 formTKB.MdiParent = this;
                 formTKB.Show();
+
+                if (nd.ID_Quyen == 2)
+                {
+                    formTKB.btn_ThemTKB.Enabled = false;
+                    formTKB.btn_SuaTKB.Enabled = false;
+                    formTKB.btn_XoaTKB.Enabled = false;
+                }
+
             }
             else
             {
                 formTKB.loaddata();
                 formTKB.Activate();
+
+                if (nd.ID_Quyen == 2)
+                {
+                    formTKB.btn_ThemTKB.Enabled = false;
+                    formTKB.btn_SuaTKB.Enabled = false;
+                    formTKB.btn_XoaTKB.Enabled = false;
+                }
+
             }
         }
 
@@ -91,7 +107,7 @@ namespace PhanMemQuanLySinhVien
             /*MessageBox.Show("S");*/
             
             if(form1 == null){
-                form1 = new Form1();
+                form1 = new FormKhoa();
                 form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form1.StartPosition = FormStartPosition.Manual;
                 form1.MdiParent = this;
@@ -108,7 +124,7 @@ namespace PhanMemQuanLySinhVien
             
             if (form2 == null)
             {
-                form2 = new Form2();
+                form2 = new FormLop();
                 form2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form2.StartPosition = FormStartPosition.Manual;
                 form2.MdiParent = this;
@@ -126,7 +142,7 @@ namespace PhanMemQuanLySinhVien
         {
             if (form3 == null)
             {
-                form3 = new Form3();
+                form3 = new FormMonHoc();
                 form3.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form3.StartPosition = FormStartPosition.Manual;
                 form3.MdiParent = this;
@@ -145,7 +161,7 @@ namespace PhanMemQuanLySinhVien
             /*MessageBox.Show("S");*/
             if (form4 == null)
             {
-                form4 =  new Form4();
+                form4 =  new FormTTSV();
                 form4.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form4.StartPosition = FormStartPosition.Manual;
                 form4.MdiParent = this;
@@ -166,7 +182,7 @@ namespace PhanMemQuanLySinhVien
             /* MessageBox.Show("S");*/
             if (form5 == null)
             {
-                form5 = new Form5();
+                form5 = new FormDiemSV();
                 form5.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form5.StartPosition = FormStartPosition.Manual;
                 form5.MdiParent = this;
@@ -187,7 +203,7 @@ namespace PhanMemQuanLySinhVien
             /*MessageBox.Show("S");*/
             if (form6 == null)
             {
-                form6 = new Form6();
+                form6 = new FormDangNhap();
                 this.Close();
                 form6.StartPosition = FormStartPosition.CenterScreen;
                 form6.Show();
@@ -199,7 +215,7 @@ namespace PhanMemQuanLySinhVien
         {
             if (form7 == null)
             {
-                form7 = new Form7();
+                form7 = new FormTTND();
                 form7.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 form7.StartPosition = FormStartPosition.Manual;
                 form7.MdiParent = this;
@@ -250,11 +266,12 @@ namespace PhanMemQuanLySinhVien
                 btnQLMH.Visible = false;
                 btnQLTTSV.Visible = false;
                 btnThongKe.Visible = false;
+                btnQLTKB.Visible = false;
 
 
                 if (form8 == null)
                 {
-                    form8 = new Form8(nd);
+                    form8 = new FormSVDangNhap(nd);
                     form8.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                     form8.StartPosition = FormStartPosition.Manual;
                     form8.MdiParent = this;
@@ -271,6 +288,7 @@ namespace PhanMemQuanLySinhVien
                 btnQuanLyLop.Enabled = false;
                 btnQLMH.Enabled = false;
                 btnQLND.Enabled = false;
+                
             }
 
         }
