@@ -53,6 +53,8 @@ namespace PhanMemQuanLySinhVien
                 TenLop = lop,
                 MaKhoa = khoa
             };
+
+
             qlsv.LOPs.Add(lOP);
             qlsv.SaveChanges();
             loadData();
@@ -79,12 +81,21 @@ namespace PhanMemQuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtMaLop.Text);
 
-            var lop = qlsv.LOPs.Where(h => h.MaLop == id).First();
-            qlsv.LOPs.Remove(lop);
-            qlsv.SaveChanges();
-            loadData();
+            DialogResult a = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (a == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(txtMaLop.Text);
+
+                var lop = qlsv.LOPs.Where(h => h.MaLop == id).First();
+                qlsv.LOPs.Remove(lop);
+                qlsv.SaveChanges();
+                loadData();
+            }
+
+
+
 
         }
 

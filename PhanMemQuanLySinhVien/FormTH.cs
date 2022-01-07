@@ -42,6 +42,13 @@ namespace PhanMemQuanLySinhVien
             }
             clicked.BackColor = Color.Coral;
 
+            pictureBox1.BackColor = Color.SandyBrown;
+            pictureBox2.BackColor = Color.SandyBrown;
+            label1.BackColor = Color.SandyBrown;
+            label2.BackColor = Color.SandyBrown;
+            lbTenNguoiDung.BackColor = Color.SandyBrown;
+            lbDoiTuongDN.BackColor = Color.SandyBrown;
+
             String idname = clicked.Name;
             switch (idname)
             {
@@ -61,7 +68,7 @@ namespace PhanMemQuanLySinhVien
         private void btnQuanLyKhoa_Clicked()
         {
             /*MessageBox.Show("S");*/
-
+            
             if(form1 == null){
                 form1 = new Form1();
                 form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -256,52 +263,6 @@ namespace PhanMemQuanLySinhVien
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-        int x = 0;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            x = label3.Location.X;
-            x--;
-            label3.Location = new Point(x, label3.Location.Y);
-            Color colortruocdo = label3.ForeColor;
-            Color[] clr = new Color[] { Color.Red, Color.Pink, Color.White, Color.Green, Color.Yellow };
-            for (Int32 i = 0; i < clr.Length; i++)
-            {
-                if (label3.ForeColor == clr[i])
-                {
-                    label3.ForeColor = (i == clr.Length - 1 ? clr[0] : clr[i + 1]);
-                    /*   if( i == clr.Length - 1) {
-                           label3.Forecolor = clr[0];
-                          else{
-                            label3.Forecolor = clr[i+1];
-                    }
-                    }
-                       */
-                    break;
-
-                }
-                if (label3.ForeColor == colortruocdo)
-                {
-                    label3.ForeColor = clr[0];
-                }
-            }
-            if (x == 0)
-            {
-                x = this.Size.Width;
-                label3.Visible = false;
-                
-            }
-           
-        }
-        int y = 0;
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            y++;
-            if(y== 25)
-            {
-                pictureBox1.Hide();
-                timer2.Stop();
-            }
         }
     }
 }

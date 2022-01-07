@@ -299,7 +299,7 @@ namespace PhanMemQuanLySinhVien
                 dataGridView1.DataSource = ds;
 
             }
-            else if (diem.Equals("6.5<= Và <8"))
+            else if (diem.Equals("6.5<= Và <8.5"))
             {
                 var ds = db.DIEMs.Where(x => (((x.DiemQuaTrinh + x.DiemGiuaKy) / 2) * 0.3 + (x.DiemCuoiKy * 0.7)) >= 6.5 && (((x.DiemQuaTrinh + x.DiemGiuaKy) / 2) * 0.3 + (x.DiemCuoiKy * 0.7)) <= 8.5).Select(
                x => new

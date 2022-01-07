@@ -74,12 +74,20 @@ namespace PhanMemQuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtMaKhoa.Text);
 
-            var sv = qlsv.KHOAs.Where(x => x.MaKhoa == id).First();
-            qlsv.KHOAs.Remove(sv);
-            qlsv.SaveChanges();
-            loadData();
+           DialogResult a = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (a == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(txtMaKhoa.Text);
+
+                var sv = qlsv.KHOAs.Where(x => x.MaKhoa == id).First();
+                qlsv.KHOAs.Remove(sv);
+                qlsv.SaveChanges();
+                loadData();
+            }
+
+
         }
 
 

@@ -120,11 +120,21 @@ namespace PhanMemQuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtMaSinhVien.Text);
-            var st = qlsv.SINHVIENs.Find(id);
-            qlsv.SINHVIENs.Remove(st);
-            qlsv.SaveChanges();
-            loadData();
+
+            DialogResult a = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (a == DialogResult.Yes)
+            {
+
+                int id = Convert.ToInt32(txtMaSinhVien.Text);
+                var st = qlsv.SINHVIENs.Find(id);
+                qlsv.SINHVIENs.Remove(st);
+                qlsv.SaveChanges();
+                loadData();
+            }
+
+
+
         }
 
         private void btnTim_Click(object sender, EventArgs e)

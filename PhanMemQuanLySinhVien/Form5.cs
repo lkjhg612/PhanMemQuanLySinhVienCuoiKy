@@ -168,15 +168,23 @@ namespace PhanMemQuanLySinhVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int maSV = Convert.ToInt32(txtMaSinhVien.Text);
-            int maMH = Convert.ToInt32(cbMonHoc.SelectedValue.ToString());
-            var diem = qlsv.DIEMs.Where(h => h.SINHVIEN.MaSV == maSV && h.MONHOC.MaMH == maMH).First();
+            DialogResult a = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            qlsv.DIEMs.Remove(diem);
+            if (a == DialogResult.Yes)
+            {
+                int maSV = Convert.ToInt32(txtMaSinhVien.Text);
+                int maMH = Convert.ToInt32(cbMonHoc.SelectedValue.ToString());
+                var diem = qlsv.DIEMs.Where(h => h.SINHVIEN.MaSV == maSV && h.MONHOC.MaMH == maMH).First();
 
-            qlsv.SaveChanges();
+                qlsv.DIEMs.Remove(diem);
 
-            loadDataDiemSV();
+                qlsv.SaveChanges();
+
+                loadDataDiemSV();
+            }
+
+
+
            
             
         }

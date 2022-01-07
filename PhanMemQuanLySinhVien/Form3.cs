@@ -59,12 +59,21 @@ namespace PhanMemQuanLySinhVien
 		}
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(txtMaMonHoc.Text);
 
-            var sv = qlsv.MONHOCs.Where(x => x.MaMH == ID).First();
-            qlsv.MONHOCs.Remove(sv);
-            qlsv.SaveChanges();
-            loadData();
+            DialogResult a = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (a == DialogResult.Yes)
+            {
+
+                int ID = Convert.ToInt32(txtMaMonHoc.Text);
+
+                var sv = qlsv.MONHOCs.Where(x => x.MaMH == ID).First();
+                qlsv.MONHOCs.Remove(sv);
+                qlsv.SaveChanges();
+                loadData();
+            }
+
+
         }
 
         private void btnTim_Click(object sender, EventArgs e)
